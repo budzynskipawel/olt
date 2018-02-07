@@ -1,6 +1,61 @@
-body{
-  background-color: red;
-  @include phone{
-    background-color: yellow;
-  };
+body {
+    background-color: red;
+    font-family: 'Lato', sans-serif;
+    @include phone {
+        background-color: yellow;
+    }
+    ;
 }
+
+;
+.center {
+    margin: 0 auto;
+    border: 5px dotted red;
+    min-height: 100vh;
+    width: 732px;
+    @include phone {
+        width: 100%;
+    }
+}
+
+;
+.main {
+    background-image: url(http://oi65.tinypic.com/2aepcnn.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+}
+
+;
+.nowy {
+    border: 13px solid yellow;
+    // position: relative;
+    h1 {
+        border: 1px solid red;
+        text-align: center;
+        font-size: 10rem;
+        // margin-top: 15rem;
+        @include phone {
+            font-size: 5rem;
+        }
+        ;
+        font-weight: bold;
+        // position: absolute;
+        // top: 0;
+        // left: 150px;
+        z-index: 999;
+        background: -webkit-linear-gradient(transparent, #white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+    ;
+    h2 {
+        border: 1px solid blue;
+        text-align: center;
+        font-size: 5rem;
+        letter-spacing: 0.4rem;
+    }
+}
+
+;
