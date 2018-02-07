@@ -1,0 +1,23 @@
+{
+  "name": "npm_tests",
+  "version": "1.0.0",
+  "description": "opis całego projektu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[A\u001b\u001b[A\u001b[B\u001b[B\u001b[B\u001b[C\u001b[A\u001b[C"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "",
+    "gulp-sass": "",
+    "gulp-sourcemaps": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1"
+  }
+}
