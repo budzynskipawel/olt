@@ -1,139 +1,214 @@
-                                    html,
-                                    body {
-                                        height: 100%;
-                                        min-width: 320px;
-                                        min-height: 240px;
-                                        font-family: $text;
-                                    }
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+    min-height: 240px;
+    font-family: $text;
+}
 
-                                    ;
-                                    body {
-                                        background-color: red;
-                                        @include phone {
-                                            background-color: yellow;
-                                        }
-                                        ;
-                                    }
+;
+body {
+    background-color: red;
+    @include phone {
+        background-color: yellow;
+    }
+    ;
+}
 
-                                    ;
-                                    .center {
-                                        margin: 0 auto;
-                                        width: 1024px;
-                                        @include phone {
-                                            width: 100%;
-                                        }
-                                        ;
-                                        @include tablet {
-                                            width: 100%;
-                                        }
-                                    }
+;
+.center {
+    margin: 0 auto;
+    width: 1024px;
+    @include phone {
+        width: 100%;
+    }
+    ;
+    @include tablet {
+        width: 100%;
+    }
+}
 
-                                    ;
-                                    .main {
-                                        min-height: 100%;
-                                        padding-top: 4rem;
-                                        @include large{
-                                          padding-top: 6rem;
-                                        }
-                                        background-image: url(../images/main-bg.jpg);
-                                        background-repeat: repeat-y;
-                                        background-size: cover;
-                                        background-position: center 5%;
+;
+.main {
+    min-height: 100%;
+    padding-top: 4rem;
+    @include large {
+        padding-top: 6rem;
+    }
+    background-image: url(../images/main-bg.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center 5%;
+}
 
+;
+.info-ramka {
+    font-family: $main;
+    font-size: 1.75rem;
+    line-height: 3.5rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 2rem;
+    padding: 1.75rem;
+    background: rgba(255, 255, 255, 0.3);
+    @include phone {
+        width: 100%;
+        margin-top: 0;
+        font-family: $demi;
+        font-size: 1rem;
+        line-height: normal;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    ;
+    @include phone-landscape {
+        margin-top: 0;
+    }
+    ;
+}
 
-                                    };
+;
+.logo {
+    font-family: $demi;
+}
 
-                                    .info-ramka{
-                                      font-family: $main;
-                                      font-size: 1.75rem;
-                                      line-height: 3.5rem;
-                                      text-align: center;
-                                      margin: 0 auto;
-                                      width: 60%;
-                                      margin-top: 2rem;
-                                      padding: 1.75rem;
-                                      background: rgba(255,255,255, 0.3);
-                                      @include phone{width:100%;
-                                      margin-top: 0;
-                                      font-family: $demi;
-                                      font-size: 1rem;
-                                      line-height: normal;
-                                      padding: 1rem;
-                                      margin-top: 2rem;};
-                                      @include phone-landscape{
-                                      margin-top: 0;
-                                    };
+.ologo {
+    color: $logo;
+}
 
+;
+.nowy {
+    // border: 1px solid yellow;
+    position: relative;
+    height: 12rem;
+    @include phone {
+        height: 7rem;
+    }
+    h1,
+    h2,
+    h3 {
+        font-family: $demi;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        // border: 1px solid brown;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 12rem;
+        font-family: $bold;
+        @include phone {
+            font-size: 6rem;
+        }
+        ;
+        background: -webkit-linear-gradient(transparent, #eee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+    ;
+    h2 {
+        transform: translate(-50%, -80%);
+        // border: 1px solid green;
+        font-size: 8rem;
+        @include phone {
+            font-size: 4.5rem;
+        }
+    }
+    ;
+    h3 {
+        transform: translate(-50%, 120%);
+        font-family: $text;
+        font-weight: normal;
+        font-size: 1.25rem;
+        word-spacing: 1rem;
+        width: 100%;
+        @include phone {
+            font-size: 0.75rem;
+            word-spacing: 0.5rem;
+        }
+        ;
+    }
+}
 
+;
+nav {
+    @include tablet {
+        display: none;
+    }
+    @include phone {
+        display: none;
+    }
+    position: fixed;
+    height: 100%;
+    width: 6rem;
+    background: white;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    min-height: 360px;
+    ul {
+        // border: 1px solid red;
+        // min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 0;
+        i {
+            transition: 0.5s;
+            font-size: 1.25rem;
+            color: $light;
+        }
+    }
+    ;
+    li {
+        // border: 1px solid black;
+        list-style: none;
+        width: 100%;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            &:link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+            }
+            ;
+            &:hover {
+                cursor: pointer;
+                i {
+                    color: $logo;
+                    font-size: 1.75rem;
+                    transition: 0.5s;
+                }
+                ;
+            }
+            ;
+        }
+        ;
+        &:last-of-type {
+            position: absolute;
+            bottom: 2rem;
+        }
+    }
+}
 
-                                    };
-                                    .logo{
-                                      font-family: $demi;
-                                    }
-
-                                    .ologo {
-                                        color: $logo;
-                                    }
-
-                                    ;
-                                    .nowy {
-                                        // border: 1px solid yellow;
-                                        position: relative;
-                                        height: 12rem;
-
-                                        @include phone {
-                                            height: 7rem;
-                                        }
-                                        h1,
-                                        h2,
-                                        h3 {
-                                            font-family: $demi;
-                                            position: absolute;
-                                            text-align: center;
-                                            top: 50%;
-                                            left: 50%;
-                                            margin: 0;
-                                            padding: 0;
-                                        }
-                                        h1 {
-                                            // border: 1px solid brown;
-                                            transform: translate(-50%, -50%);
-                                            text-align: center;
-                                            font-size: 12rem;
-                                            font-family: $bold;
-                                            @include phone {
-                                                font-size: 6rem;
-                                            }
-                                            ;
-
-                                            background: -webkit-linear-gradient(transparent, #eee);
-                                            -webkit-background-clip: text;
-                                            -webkit-text-fill-color: transparent;
-                                            text-align: center;
-                                        }
-                                        ;
-                                        h2 {
-                                            transform: translate(-50%, -80%);
-                                            // border: 1px solid green;
-                                            font-size: 8rem;
-                                            @include phone {
-                                                font-size: 4.5rem;
-                                            }
-                                        }
-                                        ;
-                                        h3 {
-                                                                                      transform: translate(-50%, 120%);
-                                            font-family: $text;
-                                            font-weight: normal;
-                                            font-size: 1.25rem;
-                                            word-spacing: 1rem;
-                                            width: 100%;
-                                            @include phone {
-                                                font-size: 0.75rem;
-                                                word-spacing: 0.5rem;
-                                            }
-                                            ;
-                                        }
-                                    }
-
-                                    ;
+;
+.blue-circle {
+    width: 2rem;
+    height: 2rem;
+    border: 0.5rem solid $logo;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
