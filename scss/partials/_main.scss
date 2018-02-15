@@ -40,49 +40,31 @@
                                         background-size: cover;
                                         background-position: center 5%;
 
-                                        .info-ramka{
-                                          // font-weight: bold;
-                                          font-size: 1.75rem;
-                                          text-align: center;
-                                          margin: 0 auto;
-                                          width: 60%;
-                                          @include phone{width:100%;
-                                          margin-top: 0;
-                                          line-height: normal;
-                                          font-weight: bold;
-                                          font-size: 1rem;
-                                          padding: 1rem;
-                                          margin-top: 2rem;};
-                                          @include phone-landscape{
-                                          margin-top: 0;
-                                        }
-                                          margin-top: 2rem;
-                                          padding: 2rem;
-                                          background: rgba(255,255,255, 0.3);
-                                          line-height: 2rem;
 
-                                        };
                                     };
 
                                     .info-ramka{
                                       font-family: $main;
                                       font-size: 1.75rem;
+                                      line-height: 3.5rem;
                                       text-align: center;
                                       margin: 0 auto;
                                       width: 60%;
-                                      @include phone{width:20%;
+                                      margin-top: 2rem;
+                                      padding: 1.75rem;
+                                      background: rgba(255,255,255, 0.3);
+                                      @include phone{width:100%;
                                       margin-top: 0;
-                                      line-height: normal;
+                                      font-family: $demi;
                                       font-size: 1rem;
+                                      line-height: normal;
                                       padding: 1rem;
                                       margin-top: 2rem;};
                                       @include phone-landscape{
                                       margin-top: 0;
-                                    }
-                                      margin-top: 2rem;
-                                      padding: 2rem;
-                                      background: rgba(255,255,255, 0.3);
-                                      line-height: 3.5rem;
+                                    };
+
+
 
                                     };
                                     .logo{
