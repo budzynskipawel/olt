@@ -1,5 +1,36 @@
-//media queries
+//fonts
+@font-face {
+    font-family: 'Avenir Demi';
+    src: url("../fonts/AvenirNextforABG-Demi.otf") format("opentype");
+}
 
+;
+@font-face {
+    font-family: 'Avenir Bold';
+    src: url("../fonts/AvenirNextforABG-Bold.otf") format("opentype");
+}
+
+;
+@font-face {
+    font-family: 'Avenir Regular';
+    src: url("../fonts/AvenirNextforABG-Regular.otf") format("opentype");
+}
+
+;
+$main: 'Avenir Regular',
+sans-serif;
+$demi: 'Avenir Demi',
+sans-serif;
+$bold: 'Avenir Bold',
+sans-serif;
+$text: 'Lato', 'Lucida Sans Unicode', sans-serif;
+$text2: Tahoma, Geneva, sans-serif;
+
+//colors:
+$logo: rgb(30,
+30,
+148);
+//media queries
 $phone:"(max-width: 719px)";
 $phone-landscape: "(max-width: 719px) and (orientation: landscape)";
 $tablet:"(min-width: 720px) and(max-width: 1024px)";

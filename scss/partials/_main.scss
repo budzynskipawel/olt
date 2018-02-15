@@ -1,61 +1,157 @@
-body {
-    background-color: red;
-    font-family: 'Lato', sans-serif;
-    @include phone {
-        background-color: yellow;
-    }
-    ;
-}
+                                    html,
+                                    body {
+                                        height: 100%;
+                                        min-width: 320px;
+                                        min-height: 240px;
+                                        font-family: $text;
+                                    }
 
-;
-.center {
-    margin: 0 auto;
-    border: 5px dotted red;
-    min-height: 100vh;
-    width: 732px;
-    @include phone {
-        width: 100%;
-    }
-}
+                                    ;
+                                    body {
+                                        background-color: red;
+                                        @include phone {
+                                            background-color: yellow;
+                                        }
+                                        ;
+                                    }
 
-;
-.main {
-    background-image: url(http://oi65.tinypic.com/2aepcnn.jpg);
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-position: center;
-}
+                                    ;
+                                    .center {
+                                        margin: 0 auto;
+                                        width: 1024px;
+                                        @include phone {
+                                            width: 100%;
+                                        }
+                                        ;
+                                        @include tablet {
+                                            width: 100%;
+                                        }
+                                    }
 
-;
-.nowy {
-    border: 13px solid yellow;
-    // position: relative;
-    h1 {
-        border: 1px solid red;
-        text-align: center;
-        font-size: 10rem;
-        // margin-top: 15rem;
-        @include phone {
-            font-size: 5rem;
-        }
-        ;
-        font-weight: bold;
-        // position: absolute;
-        // top: 0;
-        // left: 150px;
-        z-index: 999;
-        background: -webkit-linear-gradient(transparent, #white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-    }
-    ;
-    h2 {
-        border: 1px solid blue;
-        text-align: center;
-        font-size: 5rem;
-        letter-spacing: 0.4rem;
-    }
-}
+                                    ;
+                                    .main {
+                                        min-height: 100%;
+                                        padding-top: 4rem;
+                                        @include large{
+                                          padding-top: 6rem;
+                                        }
+                                        background-image: url(../images/main-bg.jpg);
+                                        background-repeat: repeat-y;
+                                        background-size: cover;
+                                        background-position: center 5%;
 
-;
+                                        .info-ramka{
+                                          // font-weight: bold;
+                                          font-size: 1.75rem;
+                                          text-align: center;
+                                          margin: 0 auto;
+                                          width: 60%;
+                                          @include phone{width:100%;
+                                          margin-top: 0;
+                                          line-height: normal;
+                                          font-weight: bold;
+                                          font-size: 1rem;
+                                          padding: 1rem;
+                                          margin-top: 2rem;};
+                                          @include phone-landscape{
+                                          margin-top: 0;
+                                        }
+                                          margin-top: 2rem;
+                                          padding: 2rem;
+                                          background: rgba(255,255,255, 0.3);
+                                          line-height: 2rem;
+
+                                        };
+                                    };
+
+                                    .info-ramka{
+                                      font-family: $main;
+                                      font-size: 1.75rem;
+                                      text-align: center;
+                                      margin: 0 auto;
+                                      width: 60%;
+                                      @include phone{width:20%;
+                                      margin-top: 0;
+                                      line-height: normal;
+                                      font-size: 1rem;
+                                      padding: 1rem;
+                                      margin-top: 2rem;};
+                                      @include phone-landscape{
+                                      margin-top: 0;
+                                    }
+                                      margin-top: 2rem;
+                                      padding: 2rem;
+                                      background: rgba(255,255,255, 0.3);
+                                      line-height: 3.5rem;
+
+                                    };
+                                    .logo{
+                                      font-family: $demi;
+                                    }
+
+                                    .ologo {
+                                        color: $logo;
+                                    }
+
+                                    ;
+                                    .nowy {
+                                        // border: 1px solid yellow;
+                                        position: relative;
+                                        height: 12rem;
+
+                                        @include phone {
+                                            height: 7rem;
+                                        }
+                                        h1,
+                                        h2,
+                                        h3 {
+                                            font-family: $demi;
+                                            position: absolute;
+                                            text-align: center;
+                                            top: 50%;
+                                            left: 50%;
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+                                        h1 {
+                                            // border: 1px solid brown;
+                                            transform: translate(-50%, -50%);
+                                            text-align: center;
+                                            font-size: 12rem;
+                                            font-family: $bold;
+                                            @include phone {
+                                                font-size: 6rem;
+                                            }
+                                            ;
+
+                                            background: -webkit-linear-gradient(transparent, #eee);
+                                            -webkit-background-clip: text;
+                                            -webkit-text-fill-color: transparent;
+                                            text-align: center;
+                                        }
+                                        ;
+                                        h2 {
+                                            transform: translate(-50%, -80%);
+                                            // border: 1px solid green;
+                                            font-size: 8rem;
+                                            @include phone {
+                                                font-size: 4.5rem;
+                                            }
+                                        }
+                                        ;
+                                        h3 {
+                                                                                      transform: translate(-50%, 120%);
+                                            font-family: $text;
+                                            font-weight: normal;
+                                            font-size: 1.25rem;
+                                            word-spacing: 1rem;
+                                            width: 100%;
+                                            @include phone {
+                                                font-size: 0.75rem;
+                                                word-spacing: 0.5rem;
+                                            }
+                                            ;
+                                        }
+                                    }
+
+                                    ;

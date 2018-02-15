@@ -1,30 +1,30 @@
 //mediaqueries
-@mixin phone{
-  @media #{$phone}{
-    @content;
-  }
+@mixin phone {
+    @media #{$phone} {
+        @content;
+    }
 }
 
-@mixin phone-landscape{
-  @media #{$phone-landscape}{
-    @content;
-  }
+@mixin phone-landscape {
+    @media #{$phone-landscape} {
+        @content;
+    }
 }
 
-@mixin tablet{
-  @media #{$tablet}{
-    @content;
-  }
+@mixin tablet {
+    @media #{$tablet} {
+        @content;
+    }
 }
 
-@mixin desktop{
-  @media #{$desktop}{
-    @content;
-  }
+@mixin desktop {
+    @media #{$desktop} {
+        @content;
+    }
 }
 
-@mixin large{
-  @media #{$large}{
-    @content
-  }
+@mixin large {
+    @media #{$large} {
+        @content
+    }
 }
