@@ -52,6 +52,7 @@ body {
 
 ;
 .info-ramka {
+  display: none;
     font-family: $main;
     font-size: 1.75rem;
     line-height: 3.5rem;
@@ -280,17 +281,109 @@ body {
 };
 
 #right-menu{
-  width: 16rem;
-  height: 100%;
+  width: 15rem;
+  @include phone{
+    width: 100%;
+
+  };
+  min-height: 100%;
+  @include phone{
+    min-height: 50%;
+  } ;
   background-color: white;
   position: fixed;
   top:0;
-  right: -500px;
+
+    right: -500px;
+  @include phone-landscape{
+    right: -720px;
+  };
   z-index: 1;
-  transition: 0.5s;
-}
+  transition: 1s;
+  ul{
+    // border: 1px solid red;
+    margin-top:8rem;
+    @include phone{
+      margin: 2rem 0;
+        } ;
+    height: 100%;
+    li{
+      text-align: center;
+      list-style-type: none;
+      padding: 1.5rem 0;
+      @include phone-landscape{
+        padding: 0.5rem 0;
+      }
+      font-family: $text;
+      font-weight: bold;
+      font-size: 0.75rem;
+      @include phone{font-size: 1rem;}
+      color: $light;
+      &:last-of-type{
+        position: absolute;
+        bottom:2rem;
+        width: 100%;
+        @include phone{
+          position:inherit;
+        }
+      }
+    }
+
+  };
+  a{
+    display: block;
+    width: 100%;
+    transition: 0.5s;
+
+    &:link{
+      text-decoration: none;
+    };
+    &:visited{
+      color:$light;
+    };
+    &:hover{
+      color:$logo;
+
+      .line-under::after{
+        width: 8rem;
+        @include phone{
+          width: 12rem;
+        }
+        background-color: $logo;
+        }
+
+
+
+    };
+
+
+  };
+};
 
 .move-left{
   transform: translateX(-500px);
-  transition: 0.5s;
-}
+  @include phone-landscape{transform:translateX(-720px);}
+
+};
+.line-under{
+  position: relative;
+  width: 8rem;
+  @include phone{
+    width: 12rem;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  &::after{
+    transition: 0.5s;
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background-color: $light;
+    bottom:-0.5rem;
+    left: 0;
+
+  };
+};

@@ -16,6 +16,8 @@
     src: url("../fonts/AvenirNextforABG-Regular.otf") format("opentype");
 }
 
+
+
 ;
 $main: 'Avenir Regular', "Lucida Sans Unicode",
 sans-serif;
@@ -30,7 +32,7 @@ $text2: Tahoma, Geneva, sans-serif;
 $logo: rgb(30,
 30,
 148);
-$light: #ddd;
+$light: rgb(221,221,221);
 //media queries
 $phone:"(max-width: 719px)";
 $phone-landscape: "(max-width: 719px) and (orientation: landscape)";
