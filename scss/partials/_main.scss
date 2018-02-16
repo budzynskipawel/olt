@@ -4,7 +4,10 @@ body {
     height: 100%;
     min-width: 320px;
     max-width: 100%;
-    min-height: 240px;
+    @include phone{min-height: 240px;}
+
+
+
     font-family: $text;
 }
 
@@ -32,7 +35,8 @@ body {
 
 ;
 .main {
-    min-height: 100%;
+min-height: 540px;
+    height: 100%;
     padding-top: 4rem;
     @include large {
         padding-top: 6rem;
@@ -93,7 +97,7 @@ body {
 
 ;
 .nowy {
-    // border: 1px solid yellow;
+    border: 1px solid yellow;
     // display: none;
     position: relative;
     height: 12rem;
@@ -108,13 +112,13 @@ body {
         position: absolute;
         text-align: center;
         top: 50%;
-        left: 50%;
-        margin: 0;
+        width: 100%;
+        margin: 0 auto;
         padding: 0;
     }
     h1 {
-        // border: 1px solid brown;
-        transform: translate(-50%, -50%);
+        border: 1px solid brown;
+        transform: translateY(-50%);
         text-align: center;
         font-size: 12rem;
         font-family: $bold;
@@ -129,8 +133,8 @@ body {
     }
     ;
     h2 {
-        transform: translate(-50%, -80%);
-        // border: 1px solid green;
+        transform: translateY(-80%);
+        border: 1px solid green;
         font-size: 8rem;
         @include phone {
             font-size: 4.5rem;
@@ -138,12 +142,12 @@ body {
     }
     ;
     h3 {
-        transform: translate(-50%, 120%);
+        transform: translateY(120%);
         font-family: $text;
-
+        border:1px solid red;
         font-size: 1.25rem;
         word-spacing: 1rem;
-        width: 100%;
+
         @include phone {
             font-size: 0.75rem;
             word-spacing: 0.5rem;
@@ -285,12 +289,14 @@ body {
 };
 
 #right-menu{
+  overflow-y: scroll;
   width: 15rem;
   @include phone{
     width: 100%;
 
   };
   min-height: 540px;
+  @include phone{min-height:0};
   height: 100%;
   @include phone{
     min-height: 50%;
