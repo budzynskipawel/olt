@@ -3,9 +3,8 @@ body {
     font-size: 16px;
     height: 100%;
     min-width: 320px;
-    max-width: 100%;
     @include phone{min-height: 240px;}
-
+    min-height: 540px;
 
 
     font-family: $text;
@@ -35,7 +34,7 @@ body {
 
 ;
 .main {
-min-height: 540px;
+// min-height: 540px;
     height: 100%;
     padding-top: 4rem;
     @include large {
@@ -97,8 +96,7 @@ min-height: 540px;
 
 ;
 .nowy {
-    border: 1px solid yellow;
-    // display: none;
+
     position: relative;
     height: 12rem;
     @include phone {
@@ -117,7 +115,7 @@ min-height: 540px;
         padding: 0;
     }
     h1 {
-        border: 1px solid brown;
+
         transform: translateY(-50%);
         text-align: center;
         font-size: 12rem;
@@ -134,7 +132,6 @@ min-height: 540px;
     ;
     h2 {
         transform: translateY(-80%);
-        border: 1px solid green;
         font-size: 8rem;
         @include phone {
             font-size: 4.5rem;
@@ -144,7 +141,6 @@ min-height: 540px;
     h3 {
         transform: translateY(120%);
         font-family: $text;
-        border:1px solid red;
         font-size: 1.25rem;
         word-spacing: 1rem;
 
@@ -289,7 +285,6 @@ min-height: 540px;
 };
 
 #right-menu{
-  overflow-y: scroll;
   width: 15rem;
   @include phone{
     width: 100%;
