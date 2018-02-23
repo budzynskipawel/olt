@@ -12,9 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
   };
   hamburger.addEventListener("click", showHideMenu);
   //close right menu after clicking on link;
+
   for(var i = 0; i < rightMenuLinks.length; i++) {
-    rightMenuLinks[i].addEventListener("click", showHideMenu);
+    if(rightMenuLinks[i].getAttribute("href") == '#') {
+      rightMenuLinks[i].addEventListener("click", showHideMenu);
+    }
+
   };
+
   //eo hamburger
 
 
