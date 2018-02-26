@@ -17,15 +17,28 @@ body {
 .center {
   border: 1px solid red;
     margin: 0 auto;
-    width: 1024px;
+    // max-width: 1024px;
+    width: 90%;
+
     @include phone {
         width: 100%;
     }
     ;
     @include tablet {
         width: 100%;
+    };
+
+    @include large{
+      width: 1440px;
     }
+};
+.margin-menu{
+  @include desktop{margin-left: 6rem;
+  margin-right: 0;}
+
 }
+
+
 
 .logo {
     font-family: $demi;
@@ -109,8 +122,8 @@ body {
 ;
 .blue-circle {
   background-size: cover;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     background-image: url('../images/circle.png');
     margin: 1rem auto;
 };
@@ -253,7 +266,11 @@ body {
 
   };
 };
+.left-border{
+  @include desktop{border-left:1rem solid $super;};
+  @include tablet{border-left: 1rem solid $logo};
 
+}
 .move-left{
   transform: translateX(-500px);
   @include phone{transform:translateX(-720px);}
@@ -395,3 +412,77 @@ body {
 
 ;
 //end of index.html
+
+
+.oferta-main{
+  min-height: 100%;
+
+};
+
+.site-title{
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+div[class*="olt"]{
+  min-height: 260px;
+  background-color: white;
+  border: 0.75rem solid $super;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img{
+    align-self: center;
+    border: 1px solid red;
+  };
+  h2{
+    border: 1px solid blue;
+    padding: 0.5rem;
+    width: 100%;
+  };
+
+  h6{
+    border: 1px solid gray;
+    color: $dark;
+    font-weight: normal;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+}
+
+.olt-1{
+  width: 25%;
+
+
+};
+
+.olt-2{
+  width:50%;
+
+};
+.olt-3{
+  width: 75%;
+
+};
+
+.olt-1, .olt-2, .olt-3{
+  @include phone{
+    width: 100%;
+  };
+  @include tablet { width: 50%;}
+
+};
+
+.fill{
+  @include tablet{
+    order: 2;
+    width: 100%;
+  }
+}
