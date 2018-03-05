@@ -415,7 +415,7 @@ body {
 
 
 .oferta-main{
-  min-height: 100%;
+  background-color: $super;
 
 };
 
@@ -427,13 +427,25 @@ body {
   display: flex;
   flex-wrap: wrap;
 
+
 }
 
 div[class*="olt"]{
   // min-height: 260px;
-
+border: 0.75rem solid $super;
   background-color: white;
-  border: 0.75rem solid $super;
+
+
+
+  &:hover h3{
+
+    // color: $logo;
+    // // transition: 0.5s;
+    // transform:translateX(0.25rem);
+  };
+
+
+
 
 
 a{
@@ -471,6 +483,7 @@ height: 100%;}
 
     padding: 0.5rem;
     width: 100%;
+    // transition: 0.5s;
 
   };
 
@@ -505,6 +518,7 @@ height: 100%;}
 };
 
 .olt-2{
+
   width:50%;
   a{  align-items: center!important;
 
@@ -530,22 +544,25 @@ height: 100%;}
 };
 
 .olt-1, .olt-2, .olt-3{
+
   @include phone{
     width: 100%;
   };
   @include phone-landscape{ width: 50%;}
   @include tablet { width: 50%;}
 
-};
-.right-column{
-  width: 100%;
+  .right-column{
+    width: 100%;
 
-  @include large{
-    width:50%;
-  }
-  @include desktop{
-    width: 50%;
-  }
+    @include large{
+      width:50%;
+    }
+    @include desktop{
+      width: 50%;
+    }
+
+};
+
 }
 .fill{
 
@@ -568,4 +585,64 @@ height: 100%;}
   &:hover{
     cursor:auto!important;
   }
+}
+
+// tile background:
+
+#tile-background{
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: rgba(35,67,140, 0.7);
+  width: 100vw;
+  min-height: 100vh;
+
+
+
+ .fullScreen{
+   background: rgba(255,255,255, 0.8);
+    padding: 1rem;
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform:translate(-50%, -50%);
+   width: 50%;
+
+   @include phone{
+     width:100%;
+   }
+  img{display: block; margin: 0 auto;
+    max-height: 15rem;
+    padding:0.5rem;
+
+    float: left;
+    @include phone{
+      max-height: 10rem;
+      padding: 0.5rem;
+
+
+    }
+  text-align: center;}
+  h6{
+    font-size: 1rem;
+    padding: 1rem;
+    @include phone{
+      font-size: 0.875rem;
+    }
+    text-align: justify;
+    font-family: $main;
+    font-weight: normal;
+  }
+  h3{
+    padding:1.5rem;
+
+
+  }
+ }
+
+}
+.showBackground{
+
+  display:block!important;
+
 }
