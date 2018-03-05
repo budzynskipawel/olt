@@ -593,7 +593,7 @@ height: 100%;}
   display: none;
   position: fixed;
   top: 0;
-  background-color: rgba(35,67,140, 0.7);
+  background-color: rgba(0,0,0, 0.9);
   width: 100vw;
   min-height: 100vh;
 
@@ -609,7 +609,7 @@ height: 100%;}
    width: 50%;
 
    @include phone{
-     width:100%;
+     width:90%;
    }
   img{display: block; margin: 0 auto;
     max-height: 15rem;
