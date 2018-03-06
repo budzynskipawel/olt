@@ -45,6 +45,24 @@ document.addEventListener("DOMContentLoaded", function() {
     this.classList.toggle("showBackground");
   }
 
+  //show more rows on click
+
+  var more = document.getElementById('more');
+  var hide = document.getElementsByClassName("hide");
+  more.addEventListener("click", showRows);
+
+  function showRows() {
+    console.log("show rows");
+
+
+    for(var a = 0; a < hide.length; a++) {
+      hide[a].classList.remove("hide");
+    };
+
+
+    this.classList.add("hide");
+  };
+
 
 
 

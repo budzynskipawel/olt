@@ -412,6 +412,29 @@ body {
 }
 
 ;
+.more-button{
+  width: 8rem;
+  display: block;
+  margin: 1rem auto;
+  @include large{
+    margin: 2rem auto;
+  }
+  height: 2.5rem;
+  background: $logo;
+  border-radius: 1.25rem;
+  color: white;
+  font-family: $demi;
+  font-size: 0.75rem;
+  box-shadow: 0.125rem 0.125rem 0 $dark;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  };
+  &:active{
+    transform: translate(0.125rem, 0.125rem);
+  }
+
+}
 //end of index.html
 
 
@@ -422,13 +445,21 @@ body {
 
 .site-title{
   font-size: 2.5rem;
-  margin: 2rem;
+  margin:0.75rem;
+  @include large{
+    font-size: 3rem;
+    margin: 2rem;
+  }
 }
 .row{
   display: flex;
   flex-wrap: wrap;
 
 
+};
+
+.hide{
+  display: none;
 }
 
 div[class*="olt"]{
@@ -601,7 +632,7 @@ height: 100%;}
 
 
  .fullScreen{
-   background: rgba(255,255,255, 0.8);
+   background: $super;
     padding: 1rem;
    position:absolute;
    top: 50%;
@@ -626,7 +657,7 @@ height: 100%;}
   text-align: center;}
   h6{
     font-size: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     @include phone{
       font-size: 0.875rem;
     }
@@ -635,7 +666,7 @@ height: 100%;}
     font-weight: normal;
   }
   h3{
-    padding:1.5rem;
+    padding:0.5rem;
 
 
   }
