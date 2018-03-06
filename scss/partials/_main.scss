@@ -427,6 +427,9 @@ body {
   font-size: 0.75rem;
   box-shadow: 0.125rem 0.125rem 0 $dark;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover{
     cursor: pointer;
   };
@@ -459,6 +462,7 @@ body {
 };
 
 .hide{
+
   display: none;
 }
 
