@@ -49,18 +49,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var more = document.getElementById('more');
   var hide = document.getElementsByClassName("hide");
+
   more.addEventListener("click", showRows);
 
   function showRows() {
-    console.log("show rows");
+    this.style.display = "none";
 
-
-    for(var a = 0; a < hide.length; a++) {
-      hide[a].classList.remove("hide");
+    for(var i = 0; i < hide.length; i++) {
+      hide[i].classList.remove("hide");
     };
 
 
-    this.classList.add("hide");
+
   };
 
 
