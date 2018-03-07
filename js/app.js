@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburger.classList.toggle('hamburger-active');
     rightMenu.classList.toggle('move-left');
   };
-  hamburger.addEventListener("click", showHideMenu);
+  if(hamburger) {
+    hamburger.addEventListener("click", showHideMenu);
+  }
+
   //close right menu after clicking on link;
 
   for(var i = 0; i < rightMenuLinks.length; i++) {
@@ -30,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
   for(var i = 0; i < tiles.length; i++) {
     tiles[i].addEventListener("click", showFullScreen)
   };
-  tileBackground.addEventListener("click", hideFullScreen);
+  if(tileBackground) {
+    tileBackground.addEventListener("click", hideFullScreen);
+  }
+
 
   function showFullScreen() {
 
@@ -49,8 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var more = document.getElementById('more');
   var hide = document.getElementsByClassName("hide");
+  if(more) {
 
-  more.addEventListener("click", showRows);
+    more.addEventListener("click", showRows);
+  }
+
 
   function showRows() {
     this.style.display = "none";
