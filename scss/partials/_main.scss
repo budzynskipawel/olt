@@ -32,6 +32,7 @@ body {
       width: 1440px;
     }
 };
+
 .margin-menu{
   @include desktop{margin-left: 6rem;
   margin-right: 0;}
@@ -415,7 +416,7 @@ body {
 .more-button{
   width: 8rem;
   display: block;
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
   @include large{
     margin: 2rem auto;
   }
@@ -446,15 +447,18 @@ body {
 
 };
 
+
 .site-title{
+  color: $logo;
   font-size: 2.5rem;
-  margin:0.75rem;
+  padding:0.75rem;
   @include large{
     font-size: 3rem;
-    margin: 2rem;
+    padding: 2rem;
   }
 }
 .row{
+  margin: 1rem;
   display: flex;
   flex-wrap: wrap;
 
@@ -468,7 +472,7 @@ body {
 
 div[class*="olt"]{
   // min-height: 260px;
-border: 0.75rem solid $super;
+// border: 0.75rem solid $super;
   background-color: white;
 
 
@@ -495,15 +499,14 @@ height: 100%;}
 
   img{
 
-
     width: 100%;
     height: 20rem;
-    margin: 1rem 0;
+    // margin: 1rem 0;
     @include desktop{
       max-height: 20rem;
     }
     padding: 0.5rem;
-    object-fit: contain;
+    object-fit: cover;
     };
   h2{
 
@@ -536,18 +539,35 @@ height: 100%;}
 
   p:nth-of-type(1){
     text-align: justify;
-  padding: 0 2rem;
+    padding: 0 2rem;
+    column-count: 2;
+    @include phone{
+      column-count: 1;
+      text-align: left;
+    };
+    @include phone-landscape{
+      column-count: 2;
+    }
+
+
+
+
+
+
+
+
   @include phone{
     padding: 1rem;
   }
   color: $dark;
-
+  font-size: 1rem;
   }
 
 }
 
 .olt-1{
-  width: 25%;
+  width: 24%;
+  margin-right: 1%;
 
 
 
@@ -555,7 +575,8 @@ height: 100%;}
 
 .olt-2{
 
-  width:50%;
+  width:49%;
+  margin-right: 1%;
   a{  align-items: center!important;
 
     @include desktop{
@@ -575,17 +596,20 @@ height: 100%;}
 
 };
 .olt-3{
-  width: 75%;
-
-};
+  width: 74%;
+  margin-right: 1%;
+  };
 
 .olt-1, .olt-2, .olt-3{
+  min-height:15rem;
 
   @include phone{
-    width: 100%;
+    width: 99%;
+    margin-top: 1rem;
   };
-  @include phone-landscape{ width: 50%;}
-  @include tablet { width: 50%;}
+  @include phone-landscape{ width: 49%;}
+  @include tablet { width: 49%;
+  margin-top: 1rem;}
 
   .right-column{
     width: 100%;
@@ -603,19 +627,31 @@ height: 100%;}
 .fill{
 
   @include tablet{
+    margin-right: 1%;
+
     order: 2;
-    width: 100%;
+    width: 99%;
   };
   @include phone-landscape{
+    margin-right: 1%;
+
     order: 2;
-    width: 100%;
+    width: 99%;
   }
 };
 
 .no-link{
+border: none!important;
+padding-bottom: 2rem;
+@include tablet{
+  width: 99%;
+};
+@include phone-landscape{
+  width: 99%;
+}
 
   @include phone{
-    order: -1;
+    // order: -1;
   }
   align-content: flex-start!important;
   &:hover{
@@ -681,4 +717,53 @@ margin: 1rem;
 
   display:block!important;
 
+}
+
+//oferta
+.oferta-main{
+  min-height: 100%;
+  background-image: url(../images/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 5%;
+  background-attachment: fixed;
+  padding-bottom: 1rem;
+
+};
+
+
+
+.shake{
+  background-image: url(../images/kompetencja.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+@include phone{
+  display: none;
+};
+@include tablet{
+  display: none;
+}
+  // border-right: none!important;
+};
+
+.oferta-row{
+  justify-content: space-between;
+    .olt-1, .olt-3{
+      box-sizing: border-box;
+    border: none;
+
+    // margin: 1rem;
+
+  }
+
+  img{
+    transition: 0.5s;
+    filter: grayscale(80%);
+    @include phone{filter: none};
+    @include tablet{filter: none};
+    &:hover{
+      filter: none;
+    }
+  }
 }
