@@ -43,16 +43,28 @@
                   <i class="icon-home"></i>
                </a>
             </li>
-            <li>
-               <a href="https://artman.store" target="_blank">
+            <li id="sklepy">
+               <a href="#">
                   <i class="icon-shopping-basket"></i>
                </a>
+               <ul class="aside-list">
+                  <li>
+                     <a href="https://artman.store" target="blank">
+                        <span class="line-under">ARTMAN<br>STORE</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span class="line-under">GADŻETY<br>REKLAMOWE</span>
+                     </a>
+                  </li>
+               </ul>
             </li>
             <li>
-               <i class="icon-search"></i>
+               <i class="icon-search no-change"></i>
             </li>
             <li>
-               <i class="icon-download"></i>
+               <i class="icon-download no-change"></i>
             </li>
          </ul>
       </nav>
@@ -63,36 +75,55 @@
             <span></span>
          </div>
       </div>
-      <nav id="right-menu">
-         <ul>
+      <nav id="right-menu" class="left-border">
+         <ul class="main-list">
             <li>
-               <a href="#">
-                  <span class="line-under">POLIGRAFIA</span>
+               <a href="index.html">
+                  <span class="line-under">HOME</span>
                </a>
             </li>
-            <li>
-               <a href="#">
-                  <span class="line-under">REKLAMA</span>
-               </a>
-            </li>
-            <li>
-               <a href="#">
-                  <span class="line-under">KREACJA</span>
-               </a>
-            </li>
-            <li>
-               <a href="#">
-                  <span class="line-under">ZADANIA SPECJALNE</span>
-               </a>
-            </li>
-            <li>
-               <a href="https://artman.store" target="_blank">
-                  <span class="line-under">ARTMAN.STORE</span>
-               </a>
-            </li>
-            <li>
+            <li class="expand">
                <a href="oferta.html">
                   <span class="line-under">OFERTA</span>
+                  <ul class="inner-list">
+                     <li>
+                        <a href="poligrafia.html">
+                           <span class="line-under">POLIGRAFIA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="reklama.html">
+                           <span class="line-under">REKLAMA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="specjalne.html">
+                           <span class="line-under">ZADANIA SPECJALNE</span>
+                        </a>
+                     </li>
+                  </ul>
+               </a>
+            </li>
+            <li class="expand">
+               <a href="sklepy.html" class="disabled">
+                  <span class="line-under">NASZE SKLEPY</span>
+               </a>
+               <ul class="inner-list open-mobile">
+                  <li>
+                     <a href="https://artman.store" target="_blank">
+                        <span class="line-under">ARTMAN.STORE</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span class="line-under">GADŻETY REKLAMOWE</span>
+                     </a>
+                  </li>
+               </ul>
+            </li>
+            <li>
+               <a href="kontakt.html">
+                  <span class="line-under">KONTAKT</span>
                </a>
             </li>
          </ul>
