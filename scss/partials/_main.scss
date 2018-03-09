@@ -397,7 +397,7 @@ body {
 ;
 .main {
 
-    height: 100%;
+    min-height: 100%;
     padding-top: 4rem;
     @include large {
         padding-top: 6rem;
@@ -410,9 +410,8 @@ body {
     @include phone-landscape{
       padding-top: 4rem;
     }
-    background-image: url(../images/main-bg.jpg);
-    background-size: cover;
-    background-position: center 5%;
+
+  
 }
 
 ;
@@ -532,12 +531,6 @@ body {
 
 }
 //end of index.html
-
-
-.oferta-main{
-  background-color: $super;
-
-};
 
 
 .site-title{
@@ -800,13 +793,21 @@ margin: 1rem;
 }
 
 //oferta
-.oferta-main{
-  min-height: 100%;
+.fixed-background{
   background-image: url(../images/main-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center 5%;
   background-attachment: fixed;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.oferta-main{
+  min-height: 100%;
+  background-color: transparent;
   padding-bottom: 1rem;
 
 };
