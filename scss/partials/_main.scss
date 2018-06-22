@@ -1,193 +1,180 @@
-html,
-body {
-    font-size: 16px;
-    height: 100%;
-    min-width: 320px;
-    min-height: 540px;
-    @include phone{min-height: 360px;}
-    font-family: $main;
+body,
+html {
+  font-size: 16px;
+  height: 100%;
+  min-width: 320px;
+  min-height: 540px;
+  @include phone {
+    min-height: 360px;
+  }
+  font-family: $main;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-family: $demi;
 }
+
 body {
-    background-color: $super;
-}
-
-;
-.center {
-  // border: 1px solid red;
-    margin: 0 auto;
-    // max-width: 1024px;
-    width: 90%;
-
-    @include phone {
-        width: 100%;
-    }
-    ;
-    @include tablet {
-        width: 100%;
-    };
-
-    @include large{
-      width: 1440px;
-    }
+  background-color: $super;
 };
 
-.margin-menu{
-  @include desktop{margin-left: 6rem;
-  margin-right: 0;}
+.center {
+  // border: 1px solid red;
+  margin: 0 auto;
+  // max-width: 1024px;
+  width: 90%;
+  @include phone {
+    width: 100%;
+  };
+  @include tablet {
+    width: 100%;
+  };
+  @include large {
+    width: 1440px;
+  }
+};
 
+.margin-menu {
+  @include desktop {
+    margin-left: 6rem;
+    margin-right: 0;
+  }
 }
 
-
-
 .logo {
-    font-family: $demi;
+  font-family: $demi;
 }
 
 .ologo {
-    color: $logo;
-
-}
-
-;
-
-
+  color: $logo;
+};
 
 .left-menu {
-    @include tablet {
-        display: none;
-    }
-    @include phone {
-        display: none;
-    }
-    position: fixed;
-    height: 100%;
-    width: 6rem;
-    background: white;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    min-height: 360px;
-    box-shadow:  0 0 0.25rem $dark;
-    ul{
+  @include tablet {
+    display: none;
+  }
+  @include phone {
+    display: none;
+  }
+  position: fixed;
+  height: 100%;
+  width: 6rem;
+  background: white;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  min-height: 360px;
+  box-shadow: 0 0 0.25rem $dark;
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 1rem 0;
-        i {
-            transition: 0.5s;
-            font-size: 1.25rem;
-            color: $light;
-        }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+
+    i {
+      transition: 0.5s;
+      font-size: 1.25rem;
+      color: $light;
+    }
 
     li {
+      list-style: none;
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        list-style: none;
-        width: 100%;
-
-        height: 4rem;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover i:not(.no-change){
-
-
-              color: $logo;
-              font-size: 1.75rem;
-              transition: 0.5s;
-
-        }
-        a {
-            &:link {
-              color: $light;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                text-decoration: none;
-            }
-            ;
-
-            ;
-        }
-        ;
-        &:last-of-type {
-            position: absolute;
-            bottom: 2rem;
-        }
+      &:hover i:not(.no-change) {
+        color: $logo;
+        font-size: 1.75rem;
+        transition: 0.5s;
       }
-      ;
-    }
 
+      a {
+        &:link {
+          color: $light;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+        };
+      };
 
-}
+      &:last-of-type {
+        position: absolute;
+        bottom: 2rem;
+      }
+    };
+  }
+};
 
-;
-#sklepy{
+#sklepy {
   position: relative;
 }
 
-#sklepy .aside-list{
+#sklepy .aside-list {
   display: block;
   width: 6rem;
-  position:absolute;
+  position: absolute;
   left: -6rem;
   top: 3rem;
   transition: 0.5s;
-  li{
 
+  li {
     border-radius: 0;
     background: white;
     text-align: center;
     font-size: 0.75rem;
     width: 6rem;
     position: static;
-    a{
+
+    a {
       color: $light;
       font-family: $demi;
 
-      &:hover{
+      &:hover {
         transition: 0.5s;
-        color:$logo;
-        .line-under::after{
+        color: $logo;
+
+        .line-under::after {
           width: 4rem;
-          @include phone{
+          @include phone {
             width: 10rem;
           }
           background-color: $logo;
-          }
+        }
       }
     }
-
   }
-
 };
 
-
-#sklepy:hover .aside-list{
+#sklepy:hover .aside-list {
   display: block;
   left: 0;
-
 }
+
 .blue-circle {
   background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    background-image: url('../images/circle.png');
-    margin: 1rem auto;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../images/circle.png');
+  margin: 1rem auto;
 };
 
-.ham-circle{
+.ham-circle {
   position: fixed;
   display: flex;
-  z-index:9;
+  z-index: 9;
   justify-content: center;
   align-items: center;
   width: 4rem;
@@ -196,325 +183,305 @@ body {
   border-radius: 50%;
   right: 1rem;
   top: 1rem;
-  @include phone{
+  @include phone {
     right: 1rem;
     top: 1rem;
   }
 
-
-
-  #hamburger{
-  width: 33px;
-  height: 22px;
-  margin:22px;
-  display: block;
-  &:hover{
-    cursor: pointer;
-  }
-
-  span{
-    display: block;
-    border-radius: 2px;
+  #hamburger {
     width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    background: $logo;
-    transition: 1s;
+    height: 22px;
+    margin: 22px;
+    display: block;
 
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      display: block;
+      border-radius: 2px;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      background: $logo;
+      transition: 1s;
+    }
   }
-  }
-.hamburger-active{
-    span:nth-last-of-type(1){
+
+  .hamburger-active {
+    span:nth-last-of-type(1) {
       transform: rotate(45deg) translate(-3px,-10px);
       transition: 1s;
     }
-    span:nth-last-of-type(3){
+
+    span:nth-last-of-type(3) {
       transform: rotate(-45deg) translate(-3px, 10px);
       transition: 1s;
     }
-    span:nth-last-of-type(2){
+
+    span:nth-last-of-type(2) {
       opacity: 0;
     }
   }
 };
 
-#right-menu{
+#right-menu {
   width: 11rem;
-  @include phone{
+  @include phone {
     min-width: 100%;
     border-left: 1rem solid $logo;
-
-
   };
   min-height: 540px;
   height: 100%;
-
   background-color: white;
   position: fixed;
-  top:0;
-
-    right: -500px;
-  @include phone{
+  top: 0;
+  right: -500px;
+  @include phone {
     right: -720px;
   };
   z-index: 1;
   transition: 1s;
-  .main-list{
-    margin-top:8rem;
 
-    @include phone{
+  .main-list {
+    margin-top: 8rem;
+    @include phone {
       margin-top: 6rem;
     }
-    @include phone-landscape{
+    @include phone-landscape {
       margin: 0;
       padding: 0.5rem 0;
-
-        } ;
-
-
+    };
     height: 100%;
-    & >li{
-      @include phone{
-              border-bottom: 1px solid $light;}
 
-
+    & > li {
+      @include phone {
+        border-bottom: 1px solid $light;
+      }
       text-align: center;
       list-style: none;
       padding: 1.5rem 0;
       font-family: $text;
       font-weight: 700;
       font-size: 0.875rem;
-      @include phone{font-size: 1rem;}
+      @include phone {
+        font-size: 1rem;
+      }
       color: $light;
-      &:last-of-type{
+
+      &:last-of-type {
         position: absolute;
-        bottom:2rem;
+        bottom: 2rem;
         border-bottom: none!important;
         width: 100%;
-        @include phone{
-          position:inherit;
+        @include phone {
+          position: inherit;
         }
       }
     }
-
   };
-  a{
+
+  a {
     display: block;
     width: 100%;
     height: 100%;
-
     transition: 0.5s;
-        &:link{
-      text-decoration: none;
-      color:$light;
-    };
-    &:visited{
-      color:$light;
-    };
-    &:hover{
-      color:$logo;
 
-      .line-under::after{
+    &:link {
+      text-decoration: none;
+      color: $light;
+    };
+
+    &:visited {
+      color: $light;
+    };
+
+    &:hover {
+      color: $logo;
+
+      .line-under::after {
         width: 8rem;
-        @include phone{
+        @include phone {
           width: 10rem;
         }
         background-color: $logo;
-        }
-
-
-
+      }
     };
-
-
   };
-  .inner-list{
+
+  .inner-list {
     display: none;
     margin: 1.5rem auto;
 
-    li{
+    li {
       z-index: 999;
       background-color: $super;
-      color:white;
+      color: white;
       padding: 1.5rem 0;
-      list-style: none;}
-
+      list-style: none;
+    }
   };
 
-  .expand{
-    &:hover .open-mobile{
+  .expand {
+    &:hover .open-mobile {
       display: block;
     }
-    &:hover .inner-list{
 
-      @include desktop{display: block;}
-      @include large{display: block;}
-
-
-
-
+    &:hover .inner-list {
+      @include desktop {
+        display: block;
+      }
+      @include large {
+        display: block;
+      }
     };
-
-
-
-
   }
 };
-.left-border{
-  @include desktop{box-shadow:  0 0 0.25rem $dark;};
-  @include tablet{border-left: 1rem solid $logo};
 
+.left-border {
+  @include desktop {
+    box-shadow: 0 0 0.25rem $dark;
+  };
+  @include tablet {
+    border-left: 1rem solid $logo;
+  };
 }
-.move-left{
-  transform: translateX(-500px);
-  @include phone{transform:translateX(-720px);}
 
+.move-left {
+  transform: translateX(-500px);
+  @include phone {
+    transform: translateX(-720px);
+  }
 };
-.line-under{
+
+.line-under {
   position: relative;
   width: 10rem;
-  @include phone{
+  @include phone {
     width: 12rem;
   }
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  &::after{
+
+  &::after {
     transition: 0.5s;
     content: "";
     height: 2px;
     width: 0;
     position: absolute;
     background-color: $light;
-    bottom:-0.5rem;
+    bottom: -0.5rem;
     left: 1rem;
-
   };
 };
-
 // index.html
 ;
+
 .main {
-
-    min-height: 100%;
+  min-height: 100%;
+  padding-top: 4rem;
+  @include large {
+    padding-top: 6rem;
+  };
+  @include phone {
+    padding-top: 6.5rem;
+  };
+  @include phone-landscape {
     padding-top: 4rem;
-    @include large {
-        padding-top: 6rem;
-    };
+  }
+};
 
-    @include phone{
-      padding-top: 6.5rem;
-    };
-
-    @include phone-landscape{
-      padding-top: 4rem;
-    }
-
-
-}
-
-;
 .info-ramka {
-
-    font-family: $text;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0 auto;
-    width: 60%;
-    margin-top: 1.75rem;
-    padding: 1.5rem 0;
-    line-height: 2.5rem;
-    color: black;
-    background-color: rgba(238, 238, 238, 0.5);
-
-    @include phone {
-
-        width: 90%;
-        margin-top: 0;
-        font-size: 1rem;
-        line-height:1.5rem;
-        padding: 1rem 0;
-        margin-top: 2rem;
-    }
-    ;
-    @include phone-landscape {
-        margin-top: 0;
-    }
-    ;
-    @include tablet{
-      width:90%;
-    }
-    @include large{
-      width: 40%;
-    }
-}
-
-;
+  font-family: $text;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 1.75rem;
+  padding: 1.5rem 0;
+  line-height: 2.5rem;
+  color: black;
+  background-color: rgba(238, 238, 238, 0.5);
+  @include phone {
+    width: 90%;
+    margin-top: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  };
+  @include phone-landscape {
+    margin-top: 0;
+  };
+  @include tablet {
+    width: 90%;
+  }
+  @include large {
+    width: 40%;
+  }
+};
 
 .nowy {
+  position: relative;
+  height: 12rem;
+  @include phone {
+    height: 7rem;
+  }
 
-    position: relative;
-    height: 12rem;
+  h1,
+  h2,
+  h3 {
+    font-family: $demi;
+    font-weight: normal;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  h1 {
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 12rem;
+    font-family: $bold;
     @include phone {
-        height: 7rem;
-    }
-    h1,
-    h2,
-    h3 {
-        font-family: $demi;
-        font-weight: normal;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-    }
-    h1 {
+      font-size: 6rem;
+    };
+    background: -webkit-linear-gradient(transparent, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  };
 
-        transform: translateY(-50%);
-        text-align: center;
-        font-size: 12rem;
-        font-family: $bold;
-        @include phone {
-            font-size: 6rem;
-        }
-        ;
-        background: -webkit-linear-gradient(transparent, #eee);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
+  h2 {
+    transform: translateY(-80%);
+    font-size: 8rem;
+    @include phone {
+      font-size: 4.5rem;
     }
-    ;
-    h2 {
-        transform: translateY(-80%);
-        font-size: 8rem;
-        @include phone {
-            font-size: 4.5rem;
-        }
-    }
-    ;
-    h3 {
-        transform: translateY(120%);
-        font-family: $text;
-        font-size: 1.25rem;
-        word-spacing: 1rem;
+  };
 
-        @include phone {
-            font-size: 0.75rem;
-            word-spacing: 0.5rem;
-        }
-        ;
-    }
-}
+  h3 {
+    transform: translateY(120%);
+    font-family: $text;
+    font-size: 1.25rem;
+    word-spacing: 1rem;
+    @include phone {
+      font-size: 0.75rem;
+      word-spacing: 0.5rem;
+    };
+  }
+};
 
-;
-.more-button{
+.more-button {
   width: 8rem;
   display: block;
-  margin: 1rem auto 0 auto;
-  @include large{
+  margin: 1rem auto 0;
+  @include large {
     margin: 2rem auto;
   }
   height: 2.5rem;
@@ -528,228 +495,211 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover{
+
+  &:hover {
     cursor: pointer;
   };
-  &:active{
+
+  &:active {
     transform: translate(0.125rem, 0.125rem);
   }
-
 }
 //end of index.html
 
-
-.site-title{
+.site-title {
   color: $logo;
   font-size: 2.5rem;
-  padding:0.75rem;
-  @include large{
+  padding: 0.75rem;
+  @include large {
     font-size: 3rem;
     padding: 2rem;
   }
 }
-.row{
+
+.row {
   margin: 1rem;
   display: flex;
   flex-wrap: wrap;
-
-
 };
 
-.hide{
-
+.hide {
   display: none;
 }
 
-div[class*="olt"]{
-
+div[class*="olt"] {
   background-color: rgba(255, 255, 255, 0.8);
   transition: 0.5s;
-  &:hover{
+
+  &:hover {
     background-color: rgba(255, 255, 255, 1);
 
-
-  img{
-    filter:none;
+    img {
+      filter:none;
+    }
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
   }
 
-
-
-
-
-
-
-
-a{
-
-text-decoration: none;
-color: inherit;
-display:flex;
-flex-wrap: wrap;
-justify-content: center;
-align-content: flex-start;
-width: 100%;
-height: 100%;}
-
-  img{
+  img {
     align-self: flex-start;
     transition: 0.5s;
     width: 100%;
-@include desktop{height: 15rem;}
+    @include desktop {
+      height: 15rem;
+    }
     height: 20rem;
     object-fit: contain;
     // margin: 1rem 0;
     padding: 0.5rem;
+  };
 
-    };
-  h2{
-
-    width:  100%;
+  h2 {
+    width: 100%;
     padding: 0.5rem 2rem;
-    @include phone{
+    @include phone {
       padding: 1rem;
     }
-
   }
-  h3{
+
+  h3 {
     transition: 0.5s;
     padding: 0.5rem 1.25rem;
     overflow: hidden;
     width: 100%;
-    @include desktop{font-size: 1rem;}
-
+    @include desktop {
+      font-size: 1rem;
+    }
   };
 
-  h6{
+  h6 {
     // border: 1px solid blue;
     padding: 0.5rem 1rem 0.5rem 1.25rem;
     font-family: $main;
     color: $logo;
     font-weight: normal;
     width: 100%;
-    span{
-      display:none;
+
+    span {
+      display: none;
     }
   };
 
-  p:nth-of-type(1){
-
+  p:nth-of-type(1) {
     text-align: justify;
     padding: 0 2rem;
     column-count: 2;
-    @include phone{
+    @include phone {
       column-count: 1;
       text-align: left;
-        padding: 1rem;
+      padding: 1rem;
     };
-
-
-  color: $dark;
-  @include phone{ color: black};
-  font-size: 1rem;
+    color: $dark;
+    @include phone {
+      color: black;
+    };
+    font-size: 1rem;
   }
-
 }
 
-.olt-1{
+.olt-1 {
   width: 24%;
   margin-right: 1%;
-
-
-
 };
 
-.olt-2{
-
-  width:49%;
+.olt-2 {
+  width: 49%;
   margin-right: 1%;
-  a{  align-items: center!important;
 
-    @include desktop{
-      img{
+  a {
+    align-items: center!important;
+    @include desktop {
+      img {
         width: 50%!important;
       };
+    }
+    @include large {
+      img {
+        width: 50%!important;
+      }
+    }
   }
-      @include large{
-        img{width: 50%!important;
-        }
-
-      }}
-
-
-
-
-
 };
-.olt-3{
+
+.olt-3 {
   width: 74%;
   margin-right: 1%;
-  };
+};
 
-.olt-1, .olt-2, .olt-3{
-  min-height:15rem;
-
-  @include phone{
+.olt-1,
+.olt-2,
+.olt-3 {
+  min-height: 15rem;
+  @include phone {
     width: 99%;
     margin-top: 1rem;
   };
-  @include phone-landscape{ width: 49%;}
-  @include tablet { width: 49%;
-  margin-top: 1rem;}
+  @include phone-landscape {
+    width: 49%;
+  }
+  @include tablet {
+    width: 49%;
+    margin-top: 1rem;
+  }
 
-  .right-column{
+  .right-column {
     // border: 1px solid yellow;
     width: 100%;
-
-    @include large{
-      width:50%;
-    }
-    @include desktop{
+    @include large {
       width: 50%;
     }
-
-};
-
+    @include desktop {
+      width: 50%;
+    }
+  };
 }
-.fill{
 
-  @include tablet{
+.fill {
+  @include tablet {
     margin-right: 1%;
-
     order: 2;
     width: 99%;
   };
-  @include phone-landscape{
+  @include phone-landscape {
     margin-right: 1%;
-
     order: 2;
     width: 99%;
   }
 };
 
-.no-link{
-border: none!important;
-padding-bottom: 2rem;
-@include tablet{
-  width: 99%;
-};
-@include phone-landscape{
-  width: 99%;
-}
-
-  @include phone{
+.no-link {
+  border: none!important;
+  padding-bottom: 2rem;
+  @include tablet {
+    width: 99%;
+  };
+  @include phone-landscape {
+    width: 99%;
+  }
+  @include phone {
     // order: -1;
   }
   align-content: flex-start!important;
-  &:hover{
-    cursor:auto!important;
+
+  &:hover {
+    cursor: auto!important;
   }
 }
-
 // tile background:
-
-#tile-background{
+#tile-background {
   display: none;
   position: fixed;
   top: 0;
@@ -757,61 +707,55 @@ padding-bottom: 2rem;
   width: 100vw;
   min-height: 100vh;
 
-
-
- .fullScreen{
-   background: white;
-   position:absolute;
-   top: 50%;
-   left: 50%;
-   transform:translate(-50%, -50%);
-   width: 50%;
-
-   @include phone{
-     width:90%;
-   }
-  img{display: block; margin: 0 auto;
-    margin-right: 1rem;
-    max-height: 20rem;
-
-
-    float: left;
-    @include phone{
-
-      padding: 0.5rem;
-
-
+  .fullScreen {
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    @include phone {
+      width: 90%;
     }
-  text-align: center;}
-  h6{
-    width: 100%;
-    font-size: 1rem;
-    padding: 1rem;
-    @include phone{
-      font-size: 0.875rem;
+
+    img {
+      display: block;
+      margin: 0 1rem 0 auto;
+      max-height: 20rem;
+      float: left;
+      @include phone {
+        padding: 0.5rem;
+      }
+      text-align: center;
     }
-    text-align: justify;
-    font-family: $main;
-    font-weight: normal;
+
+    h6 {
+      width: 100%;
+      font-size: 1rem;
+      padding: 1rem;
+      @include phone {
+        font-size: 0.875rem;
+      }
+      text-align: justify;
+      font-family: $main;
+      font-weight: normal;
+    }
+
+    h3 {
+      // padding:0.5rem;
+      margin: 1rem;
+    }
   }
-  h3{
-    // padding:0.5rem;
-margin: 1rem;
-
-  }
- }
-
-}
-.showBackground{
-
-  display:block!important;
-
 }
 
+.showBackground {
+  display: block!important;
+}
 //oferta
-.fixed-background{
+
+.fixed-background {
   opacity: 0.7;
-  background-image: url(../images/main-bg.jpg);
+  background-image: url("../images/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -822,69 +766,71 @@ margin: 1rem;
   height: 100vh;
   z-index: -1;
 }
-#main-site{
+
+#main-site {
   opacity: 1;
 }
-.oferta-main{
+
+.oferta-main {
   min-height: 100%;
   background-color: transparent;
   // padding-bottom: 1rem;
   // wylaczony na potrzeby formularza;
-
 };
 
-
-
-.shake{
-  background-image: url(../images/kompetencja.jpg);
+.shake {
+  background-image: url("../images/kompetencja.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-@include phone{
-  display: none;
-};
-@include tablet{
-  display: none;
-}
+  @include phone {
+    display: none;
+  };
+  @include tablet {
+    display: none;
+  }
   // border-right: none!important;
 };
 
-.oferta-row{
+.oferta-row {
   justify-content: space-between;
-    .olt-1, .olt-3{
-      box-sizing: border-box;
+
+  .olt-1,
+  .olt-3 {
+    box-sizing: border-box;
     border: none;
-
     // margin: 1rem;
-
   }
 
-  img{
+  img {
     transition: 0.5s;
     filter: grayscale(90%);
-    @include phone{filter: none};
-    @include tablet{filter: none};
-
+    @include phone {
+      filter: none
+    };
+    @include tablet {
+      filter: none
+    };
   }
 }
 
-.disabled{
+.disabled {
   pointer-events: none;
-
 }
-
 /*KONTAKT*/
-.kontakt-bg{
-  @include phone{
-background-color: rgba(255,255,255, 0.8);
-  }
 
+.kontakt-bg {
+  @include phone {
+    background-color: rgba(255,255,255, 0.8);
+  }
 }
-.full-height{
+
+.full-height {
   min-height: 100vh;
   // border: 12px solid green;
 };
-.formularz{
+
+.formularz {
   border: 1px solid blue;
   padding: 0 1rem;
   width: 719px;
@@ -892,57 +838,66 @@ background-color: rgba(255,255,255, 0.8);
   font-family: $main;
   font-weight: bold;
   height: 100%;
-  @include phone{
+  @include phone {
     width: 100%;
   }
   margin: 0 auto;
   background: rgba(255,255,255, 0.95);
 
-  h1,h4{
+  h1,
+  h4 {
     padding: 0.5rem 0;
-    @include phone{
+    @include phone {
       padding: 1rem 0;
     }
     font-family: $main;
     font-weight: bold;
   };
-
 };
 
-.formfields-container{
-
+.formfields-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   @include phone {
     justify-content: center;
   }
-  border: 1px solid red;
 
-  .formfield{
-
+  .formfield {
     width: 48%;
     padding: 1rem 0;
-    @include phone{
+    @include phone {
       width: 80%;
     }
 
+    p {
+      display: none;
+    }
 
 
+    }
   }
 
-}
+.empty {
+  border: 2px solid red!important;
 
-label[class="wrapping"]{
+  & + p {
+    display: block!important;
+  }
+};
+
+
+label[class="wrapping"] {
   display: block;
   font-size: 0.75rem;
   padding: 0.25rem 0;
-
 };
-input[type="text"], textarea{
+
+input[type="text"],
+textarea {
   width: 100%;
   background-color: transparent;
-  @include phone{
+  @include phone {
     width: 100%;
   }
   border: 1px solid $logo;
@@ -950,45 +905,57 @@ input[type="text"], textarea{
   height: 2.5rem;
   padding: 0.5rem;
   font-family: $text;
-  &[name="wiadomosc"]{
-    min-height: 10rem;
-    resize: none;
-    overflow: hidden;
+  &:focus{
+    outline: none;
+    border: 2px solid $logo;
 
   }
 
+  &[name="wiadomosc"] {
+    min-height: 10rem;
+    resize: none;
+    overflow: hidden;
+  }
 }
 
-input[type="file"]{
+input[type="file"] {
   display: block;
   padding: 0.5rem 0;
 };
-input[type="checkbox"]{
+
+input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
   background-color: red;
-
 }
-.zgoda, .smalltext{
+input[type="submit"]{
+  width: 200px;
+  height: 50px;
+  background-color: $logo;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.smalltext,
+.zgoda {
   font-size: 0.5625rem;
   line-height: 0.5625rem;
-
-
 };
 
-.zgoda{
+.zgoda {
   padding: 0.5rem 0;
   display: flex;
-  align-items:center;
+  align-items: center;
 
-  label{
+  label {
     width: 90%;
     padding-left: 0.5rem;
     text-align: justify;
   }
 }
 
-.marker{
+.marker {
   color: red!important;
   padding: 0.5rem;
   font-weight: bold;
