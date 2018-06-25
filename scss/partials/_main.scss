@@ -870,7 +870,7 @@ div[class*="olt"] {
       width: 80%;
     }
 
-    p {
+    p.req {
       display: none;
     }
 
@@ -881,12 +881,14 @@ div[class*="olt"] {
 .empty {
   border: 2px solid red!important;
 
-  & + p {
+  & + p.req {
     display: block!important;
   }
 };
 
-
+.valid{
+  display: none;
+}
 label[class="wrapping"] {
   display: block;
   font-size: 0.75rem;
@@ -935,6 +937,15 @@ input[type="submit"]{
   border: none;
   outline: none;
   border-radius: 20px;
+  color: white;
+  font-family: $main;
+  font-size: 1.5rem;
+  transition: 1s;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  &:disabled{
+    opacity: 0.5;
+  }
 }
 
 .smalltext,

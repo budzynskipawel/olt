@@ -19,6 +19,7 @@
       <title>OLTOM. Poligrafia Reklama Projekty</title>
    </head>
    <body>
+
       <!--  description test-->
       <div class="fixed-background"></div>
       <section id="tile-background"></section>
@@ -27,30 +28,34 @@
             <div class="formularz">
                <h1>Masz pytania?</h1>
                <h4>Wypełnij formularz, nasz konsultant skontaktuje się Tobą:</h4>
-               <form class="" action="index.html" method="post">
+               <form class="" action="mailto:budzynski.pawel@gmail.com" method = "post">
                   <div class="formfields-container">
                      <div class="formfield">
                         <label for="imie" class="wrapping">Imię*</label>
-                        <input type="text" name="imie" placeholder="" id="imie" maxlength="20">
-                        <p class="marker smalltext">To pole jest wymagane</p>
+                        <input type="text" name="imie" placeholder="" id="imie" class = "form-text"maxlength="20">
+                        <p class="marker smalltext req">To pole jest wymagane</p>
+                        <p class="marker smalltext valid">NAME VALIDATION</p>
                      </div>
                      <div class="formfield">
                         <label for="nazwisko" class="wrapping">Nazwisko*</label>
-                        <input type="text" name="nazwisko" placeholder="" id="nazwisko" maxlength="20">
-                        <p class="marker smalltext">To pole jest wymagane</p>
+                        <input type="text" name="nazwisko" placeholder="" id="nazwisko" class = "form-text"maxlength="20">
+                        <p class="marker smalltext req">To pole jest wymagane</p>
+                        <p class="marker smalltext valid">SURNAME VALIDATION</p>
                      </div>
                      <div class="formfield">
                         <label for="email" class="wrapping">Adres e-mail*</label>
-                        <input type="text" name="email" placeholder="" id="email" maxlength="50">
-                        <p class="marker smalltext">To pole jest wymagane</p>
+                        <input type="text" name="email" placeholder="" id="email"class = "form-text" maxlength="50">
+                        <p class="marker smalltext req">To pole jest wymagane</p>
+                        <p class="marker smalltext valid">ADDRESS VALIDATION</p>
                      </div>
                   </div>
                   <div class="formfield">
                      <label for="wiadomosc" class="wrapping">Treść zapytania*
                         <span class="marker" id = "chars">Pozostała ilość znaków: 2000</span>
                      </label>
-                     <textarea name="wiadomosc" placeholder="" id="wiadomosc" maxlength="2000"
+                     <textarea name="wiadomosc" placeholder="" id="wiadomosc" maxlength="2000" class = "form-text"
                      ></textarea>
+                     <p class="marker smalltext valid">TEXT VALIDATION</p>
 
                   </div>
                   <label class="wrapping">*
