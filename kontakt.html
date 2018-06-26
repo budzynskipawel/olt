@@ -28,7 +28,7 @@
             <div class="formularz">
                <h1>Masz pytania?</h1>
                <h4>Wypełnij formularz, nasz konsultant skontaktuje się Tobą:</h4>
-               <form class="" action="mailto:budzynski.pawel@gmail.com" method = "post">
+               <form class="" action="index.html" method = "post">
                   <div class="formfields-container">
                      <div class="formfield">
                         <label for="imie" class="wrapping">Imię*</label>
@@ -98,6 +98,7 @@
                         handlowej wysłanej przez OLTOM w imieniu własnym lub na zlecenie jej partnerów biznesowych, a także
                         na przekazywanie danych osobowych innym podmiotom.</label>
                   </div>
+<div class="g-recaptcha" data-sitekey="6LeI0GAUAAAAAKYj4VQp16NiCbNVOFiL2-CW8eBi" ></div>
                   <input type="submit" name="" value="Wyślij zapytanie" disabled>
                   <p class='smalltext zgoda'>Oltom.pl jest administratorem Twoich danych osobowych znajdujących się w
                      formularzu i są one przetwarzane m. in. w celu wykonania Twojego zapytania. Informacje o Twoich
@@ -201,8 +202,14 @@
             </li>
          </ul>
       </nav>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script type="text/javascript" src="js/form.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js"
+             async defer>
+         </script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+         <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                async defer>    </script>     -->
+                  <script type="text/javascript" src="js/form.js"></script>
 
       <script type="text/javascript" src="js/app.js"></script>
    </body>

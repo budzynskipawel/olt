@@ -886,9 +886,7 @@ div[class*="olt"] {
   }
 };
 
-.valid{
-  display: none;
-}
+
 label[class="wrapping"] {
   display: block;
   font-size: 0.75rem;
@@ -917,6 +915,18 @@ textarea {
     min-height: 10rem;
     resize: none;
     overflow: hidden;
+  }
+
+};
+
+.valid{
+  display: none;
+};
+
+.invalid{
+  border: 2px solid red!important;
+  & ~ p.valid{
+    display: block!important;
   }
 }
 
