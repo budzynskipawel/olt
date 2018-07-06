@@ -4,6 +4,7 @@
   function enableBtn() {
     captchaOK = true;
     console.log('captcha');
+    submitToggle();
 
   };
 
@@ -24,7 +25,7 @@
     var body = $('body');
 
     var skad = '';
-    var captcha = $('.g-recaptcha');
+    var captcha = $('.recaptcha-checkbox-checkmark');
 
 
 
@@ -56,7 +57,7 @@
 
 
 
-    function submitToggle() {
+    submitToggle = function() {
       var banka = 0;
       for(var i = 0; i < checkboxes.length; i++) {
         if(checkboxes[i].checked) {
@@ -72,11 +73,14 @@
 
     }
     checkboxes.on('click', submitToggle);
-    // captcha.on('change', submitToggle);
+
+    captcha.on('click', function() {
+      console.log('d');
+    });
 
 
-    grecaptcha.render(
-      submitToggle());
+    // grecaptcha.render(
+    //   submitToggle());
 
     //
     // Empty fields VALIDATION
@@ -100,6 +104,7 @@
 
         } else if((i === a.length - 1) && !($(a[i]).val() === '')) {
           testName(imie, nazwisko);
+          testAddress(email);
         } else {
           $(a[i]).removeClass('empty');
           console.log(a[i], 'dobry');
@@ -129,7 +134,8 @@
     // console.log(testName.test(jan));
 
     var namePattern = /^[a-ząęćśółźż-]{3,20}$/i;
-    var emailPattern;
+    // var emailPattern = /^[a-ząęćśółźż-]{3,20}$/i;
+    var emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     function testName() {
       console.log(arguments);
@@ -147,16 +153,37 @@
 
     };
 
+    function testAddress() {
+      console.log(arguments);
+      for(var i = 0; i < arguments.length; i++) {
+        var toTest = $(arguments[i]).val();
+        if(!emailPattern.test(toTest)) {
+          $(arguments[i]).addClass('invalid');
+          console.log(toTest, 'źle');
+
+          event.preventDefault();
+          break;
+        }
+      }
+
+
+    };
+
 
     function removeInvalid() {
       var toTest = $(this).val();
-      if(namePattern.test(toTest)) {
-        $(this).removeClass('invalid')
+      if((($(this).attr('name', 'imie')) || ($(this).attr('name', 'nazwisko'))) && (namePattern.test(toTest))) {
+        $(this).removeClass('invalid');
+        console.log($(this), 'OK');
+      } else if(($(this).attr('name', 'email')) && (emailPattern.test(toTest))) {
+        $(this).removeClass('invalid');
+        console.log($(this), 'OK');
       }
     };
     imie.on('keyup', removeInvalid);
     nazwisko.on('keyup', removeInvalid);
     email.on('keyup', removeInvalid);
+
 
     //
     // GENERAL VALIDATION
