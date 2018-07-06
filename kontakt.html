@@ -28,7 +28,8 @@
             <div class="formularz">
                <h1>Masz pytania?</h1>
                <h4>Wypełnij formularz, nasz konsultant skontaktuje się Tobą:</h4>
-               <form class="" action="index.html" method = "post">
+               <!-- <form class="" action="index.html" method = "post"> -->
+               <form>
                   <div class="formfields-container">
                      <div class="formfield">
                         <label for="imie" class="wrapping">Imię*</label>
@@ -55,7 +56,7 @@
                      </label>
                      <textarea name="wiadomosc" placeholder="" id="wiadomosc" maxlength="2000" class = "form-text"
                      ></textarea>
-                     <p class="marker smalltext valid">TEXT VALIDATION</p>
+                     <p class="marker smalltext valid">Używaj dozwolonych znaków.</p>
 
                   </div>
                   <label class="wrapping">*
@@ -65,7 +66,7 @@
                      <h4>Załączniki</h4>
                      <p class="smalltext">możesz dodać maksymalnie 10 plików o łącznej wielkości do 6MB.</p>
                   </div>
-                  <input type="file" name="" value="Załącz" accept=".doc, .xls, .pdf, .jpeg, .jpg, .tiff, .png">
+                  <input type="file" name="" value="Załącz" accept=".doc, .xls, .pdf, .jpeg, .jpg, .tiff, .png" multiple>
                   <div class="zgoda">
                      <input type="checkbox" name="zgoda1" id="zgoda1">
                      <label for="zgoda1" class='smalltext'>Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie
