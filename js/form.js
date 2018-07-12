@@ -139,8 +139,8 @@
     var namePattern = /^[a-ząęćśółźż-]{3,20}$/i;
     // var emailPattern = /^[a-ząęćśółźż-]{3,20}$/i;
     var emailPattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
-    var textPattern = /^([0-9A-Za-zĄąĆćĘęŁłÓóŃńŚśŹźŻź,.!?'"();:/-])\w/;
-
+    // var textPattern = /^([0-9A-Za-zĄąĆćĘęŁłÓóŃńŚśŹźŻź,.!?'"();:/-])\w/;
+    var textPattern = /^[A-Za-zĄąĆćĘęŁłÓóŃńŚśŹźŻź0-9?,\.!?'"();:/_-]{3,2000}$/;
 
     function testName() {
       console.log(arguments);
@@ -213,7 +213,8 @@
     //
     function generalValidation() {
       emptyInput(texts);
-      event.preventDefault();
+      // event.preventDefault();
+
 
 
     }
