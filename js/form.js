@@ -1,5 +1,6 @@
   var captchaOK = false;
   var submitBtn = $('input[type="submit"]');
+  
 
   function enableBtn() {
     captchaOK = true;
@@ -24,12 +25,13 @@
     var texts = $('.form-text');
     var chars = $('#chars'); // Characters left span
     var checkboxes = $('input[type="checkbox"]');
+    
     var body = $('body');
 
     var skad = '';
     var captcha = $('.recaptcha-checkbox-checkmark');
 
-
+    
 
     //
     //Prevents from cut,copy,paste
@@ -118,7 +120,8 @@
         }
 
 
-      }
+      };
+      testUpload();
     }
 
     function removeEmpty() {
@@ -192,6 +195,45 @@
       }
     };
 
+    function testUpload(){
+        var upload = $('#fileUpload');
+        var wrongFiles = $('#wrongFiles');
+        // var numFiles = $("#fileUpload",this)[0].files.length;
+        var numFiles = upload[0].files.length;
+        // alert(numFiles);
+        console.log('plikow:',numFiles);
+        
+        if(numFiles > 10){
+          upload.addClass('invalid');
+          wrongFiles.text('Za dużo plików!');
+          var offset = upload.offset();
+          $('html, body').scrollTop(offset.top);
+          event.preventDefault();
+
+        
+   
+    }else{
+      upload.removeClass('invalid');
+        var fileSize = 0;
+      for (var i = 0; i < (numFiles); i++){
+        fileSize += upload[0].files[i].size;
+      };
+      if( fileSize > 6291456){
+        
+        event.preventDefault();
+        upload.addClass('invalid');
+        wrongFiles.text('Łączny rozmiar plików przekracza 6MB');
+        
+      }else{
+        event.preventDefault(); // do usunięcia
+      }
+      
+    
+  };
+
+};
+
+
 
     function removeInvalid() {
       var toTest = $(this).val();
@@ -213,11 +255,11 @@
     //
     function generalValidation() {
       emptyInput(texts);
-      // event.preventDefault();
+     
 
 
 
-    }
+    };
 
 
 

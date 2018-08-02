@@ -29,7 +29,7 @@
                <h1>Masz pytania?</h1>
                <h4>Wypełnij formularz, nasz konsultant skontaktuje się Tobą:</h4>
 
-               <form class="" action="index.html" method = "post">
+               <form class=""  method = "post">
 
                   <div class="formfields-container">
                      <div class="formfield">
@@ -68,7 +68,10 @@
                      <h4>Załączniki</h4>
                      <p class="smalltext">możesz dodać maksymalnie 10 plików o łącznej wielkości do 6MB.</p>
                   </div>
-                  <input type="file" name="" value="Załącz" accept=".doc, .xls, .pdf, .jpeg, .jpg, .tiff, .png" multiple>
+                  <input type="file" name="fileUpload" value="Załącz" accept=".doc, .xls, .pdf, .jpeg, .jpg, .tiff, .png" multiple id="fileUpload">
+                  <label for="fileUpload">Załącz pliki</label>
+                  <p class="marker smalltext valid" id ="wrongFiles">test text</p>
+
                   <div class="zgoda">
                      <input type="checkbox" name="zgoda1" id="zgoda1">
                      <label for="zgoda1" class='smalltext'>Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie
