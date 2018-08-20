@@ -10,6 +10,21 @@ html {
   font-family: $main;
 }
 
+.noscript{
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  padding: 0.25rem;
+  text-align: center;
+  transform: translate(-50%,0);
+  z-index: 100;
+  left: 50%;
+  color: white;
+  // background-color: #147D7D;
+  background-color: darkred;
+  margin-bottom: 2rem;
+};
+
 h1,
 h2,
 h3,
@@ -938,15 +953,15 @@ textarea {
 input[type="file"] {
   width: 0.1px;
 	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
+  opacity: 0;
+  overflow: hidden;
 	position: absolute;
 	z-index: -1;
   &~label{
     display: inline-block;
     transition: 0.25s;
     text-align: center;
-    width: 7rem;
+    width: 8rem;
     border: 2px solid $logo;
     margin: 1rem 0;
     padding: 0.5rem;
@@ -958,6 +973,15 @@ input[type="file"] {
     }
   }
 };
+
+#uploadedFiles{
+  margin:0 0 1rem 0;
+  overflow: hidden;
+  h4{
+    font-size: 1rem;
+  }
+  font-size: 0.75rem;
+}
 
 input[type="checkbox"] {
   display: block;
@@ -1073,6 +1097,14 @@ input[type="checkbox"] {
     // left: -2.5rem;
       padding-left: 0.5rem;
       text-align: justify;
+    }
+  }
+
+  #wrongFiles{
+    font-size: 1rem;
+    padding-left: 0!important;
+    @include phone{
+      font-size: 0.875rem;
     }
   }
 

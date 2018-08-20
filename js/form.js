@@ -55,9 +55,32 @@
 
     }
     wiadomosc.on('keyup', showLength);
+
+    // 
+    //Shows uploaded files: 
+    // 
+    
+    var uploadedFiles = $("#uploadedFiles");
+    var fileInput = $("#fileUpload");
+
+    fileInput.on("change", function(){
+      var fileCount = this.files.length;
+      var uploadLabel = '<h4>Załączone pliki: ' +  fileCount + '</h4>';   
+        
+      for (var i = 0; i < fileCount; i++){
+        uploadLabel += this.files[i].name + "<br>";
+      };
+      uploadedFiles.html(uploadLabel);
+      
+      testUpload();
+    })
+    
+
     //
     //Activates submit
     //
+
+    
 
 
 

@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function hideFullScreen() {
     this.classList.toggle("showBackground");
-  }
+  };
 
   //show more rows on click
 
@@ -63,9 +63,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function showRows() {
     this.style.display = "none";
-
-    for(var i = 0; i < hide.length; i++) {
-      hide[i].classList.remove("hide");
+    console.log(hide);
+    for(var i = 0; i <=hide.length ; i++) {
+      console.log(hide[i]);
+      // hide[i].classList.remove("hide");
+      hide[i].style.display = "flex";
     };
 
 
