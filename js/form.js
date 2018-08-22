@@ -1,6 +1,8 @@
+  // activates submit when captcha
+  
   var captchaOK = false;
   var submitBtn = $('input[type="submit"]');
-  
+  var wrongFiles = $('#wrongFiles');
 
   function enableBtn() {
     captchaOK = true;
@@ -45,7 +47,7 @@
 
 
     //
-    //Counts end inserts how many characters are left
+    //Counts and inserts how many characters are left
     //
     function showLength() {
       var currentText = wiadomosc.val();
@@ -65,15 +67,31 @@
 
     fileInput.on("change", function(){
       var fileCount = this.files.length;
+      var fileSize = 0;
       var uploadLabel = '<h4>Załączone pliki: ' +  fileCount + '</h4>';   
         
       for (var i = 0; i < fileCount; i++){
         uploadLabel += this.files[i].name + "<br>";
+        fileSize += this.files[i].size;
       };
       uploadedFiles.html(uploadLabel);
       
-      testUpload();
-    })
+
+      //start
+      
+      
+      
+      if( fileSize > 6291456){
+              
+        fileInput.addClass('invalid');
+        wrongFiles.text('Łączny rozmiar plików przekracza 6MB');
+      }else{
+        fileInput.removeClass('invalid');
+        wrongFiles.text(' ');
+      };
+      //stop
+      
+    });
     
 
     //
@@ -115,7 +133,7 @@
 
 
 
-    function emptyInput(a) {
+    function emptyInput(a, event)  { //dodane
       console.log(a.length);
       console.log(a);
       var b;
@@ -130,9 +148,9 @@
           break;
 
         } else if((i === a.length - 1) && !($(a[i]).val() === '')) {
-          testName(imie, nazwisko);
-          testAddress(email);
-          testTextarea(wiadomosc);
+          testName([imie, nazwisko], event);
+          // testAddress([email], event);
+          // testTextarea([wiadomosc], event);
         } else {
           $(a[i]).removeClass('empty');
           console.log(a[i], 'dobry');
@@ -144,7 +162,7 @@
 
 
       };
-      testUpload();
+      testUpload(event);
     }
 
     function removeEmpty() {
@@ -168,7 +186,7 @@
     // var textPattern = /^([0-9A-Za-zĄąĆćĘęŁłÓóŃńŚśŹźŻź,.!?'"();:/-])\w/;
     var textPattern = /^[A-Za-zĄąĆćĘęŁłÓóŃńŚśŹźŻź0-9?,\.!?'"();:/_-]{3,2000}$/;
 
-    function testName() {
+    function testName(arguments, event) { 
       console.log(arguments);
       for(var i = 0; i < arguments.length; i++) {
         var toTest = $(arguments[i]).val();
@@ -176,16 +194,20 @@
           $(arguments[i]).addClass('invalid');
           console.log(toTest, 'źle');
           var offset = $(arguments[i]).offset();
+
           $('html, body').scrollTop(offset.top);
           event.preventDefault();
           break;
+        }else if(i === arguments.length - 1){
+          testAddress([email], event);
         }
+        
       }
-
+      
 
     };
 
-    function testAddress() {
+    function testAddress(arguments, event) { 
       console.log(arguments);
       for(var i = 0; i < arguments.length; i++) {
         var toTest = $(arguments[i]).val();
@@ -196,13 +218,16 @@
           $('html, body').scrollTop(offset.top);
           event.preventDefault();
           break;
+        }else{
+          testTextarea([wiadomosc], event);
         }
+        
       }
 
 
     };
 
-    function testTextarea() {
+    function testTextarea(arguments, event) {
       console.log(arguments);
       for(var i = 0; i < arguments.length; i++) {
         var toTest = $(arguments[i]).val().replace(/\s+/g, '');
@@ -218,9 +243,9 @@
       }
     };
 
-    function testUpload(){
+    function testUpload(event){
         var upload = $('#fileUpload');
-        var wrongFiles = $('#wrongFiles');
+        
         // var numFiles = $("#fileUpload",this)[0].files.length;
         var numFiles = upload[0].files.length;
         // alert(numFiles);
@@ -241,6 +266,7 @@
       for (var i = 0; i < (numFiles); i++){
         fileSize += upload[0].files[i].size;
       };
+      
       if( fileSize > 6291456){
         
         event.preventDefault();
@@ -248,13 +274,16 @@
         wrongFiles.text('Łączny rozmiar plików przekracza 6MB');
         
       }else{
-        event.preventDefault(); // do usunięcia
+        
+        
       }
       
     
   };
 
 };
+
+
 
 
 
@@ -266,18 +295,22 @@
       } else if(($(this).attr('name', 'email')) && (emailPattern.test(toTest))) {
         $(this).removeClass('invalid');
         console.log($(this), 'OK');
+      } else if(($(this).prop('tagName') === "TEXTAREA") && (textPattern.test(toTest))) {
+        $(this).removeClass('invalid');
+        console.log($(this), 'OK');
       }
     };
     imie.on('keyup', removeInvalid);
     nazwisko.on('keyup', removeInvalid);
     email.on('keyup', removeInvalid);
+    wiadomosc.on('keyup', removeInvalid);
 
 
     //
     // GENERAL VALIDATION
     //
-    function generalValidation() {
-      emptyInput(texts);
+    function generalValidation(event) { // dodane
+      emptyInput(texts, event);
      
 
 

@@ -917,6 +917,7 @@ input[type="text"],
 textarea {
   width: 100%;
   background-color: transparent;
+  
   @include phone {
     width: 100%;
   }
@@ -931,12 +932,14 @@ textarea {
     border: 2px solid $logo;
   }
 
-  &[name="wiadomosc"] {
-    min-height: 10rem;
-    resize: none;
-    overflow: hidden;
-  }
+  
 };
+
+textarea{
+  min-height: 10rem;
+    resize: none!important;
+    overflow: hidden;
+}
 
 .valid {
   display: none;
