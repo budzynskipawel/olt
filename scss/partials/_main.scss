@@ -1,6 +1,7 @@
 body,
 html {
   font-size: 16px;
+  color: $my-black;
   height: 100%;
   min-width: 320px;
   min-height: 540px;
@@ -198,7 +199,7 @@ body {
 .ham-circle {
   position: fixed;
   display: flex;
-  z-index: 9;
+  z-index: 99;
   justify-content: center;
   align-items: center;
   width: 4rem;
@@ -217,7 +218,7 @@ body {
     height: 22px;
     margin: 22px;
     display: block;
-
+    
     &:hover {
       cursor: pointer;
     }
@@ -253,8 +254,9 @@ body {
 #right-menu {
   width: 11rem;
   @include phone {
+   
     min-width: 100%;
-    border-left: 1rem solid $logo;
+    // border-left: 0.5rem solid $logo;
   };
   min-height: 540px;
   height: 100%;
@@ -265,7 +267,7 @@ body {
   @include phone {
     right: -720px;
   };
-  z-index: 99;
+  z-index: 98;
   transition: 1s;
 
   .main-list {
@@ -282,6 +284,7 @@ body {
     & > li {
       @include phone {
         border-bottom: 1px solid $light;
+        
       }
       text-align: center;
       list-style: none;
@@ -290,7 +293,7 @@ body {
       font-weight: 700;
       font-size: 0.875rem;
       @include phone {
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
       color: $light;
 
@@ -552,13 +555,24 @@ body {
 
 div[class*="olt"] {
   background-color: rgba(255, 255, 255, 0.8);
+  
   transition: 0.5s;
-
+ 
   &:hover {
     background-color: rgba(255, 255, 255, 1);
+   
 
     img {
       filter:none;
+    }
+
+    h6{
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    h3{
+      transform: translateY(0);
     }
   }
 
@@ -571,6 +585,8 @@ div[class*="olt"] {
     align-content: flex-start;
     width: 100%;
     height: 100%;
+
+
   }
 
   img {
@@ -578,17 +594,29 @@ div[class*="olt"] {
     transition: 0.5s;
     width: 100%;
     @include desktop {
-      height: 15rem;
+      // height: 15rem; new imgs
     }
-    height: 20rem;
+    // height: 20rem;  new imgs
     object-fit: contain;
     // margin: 1rem 0;
     padding: 0.5rem;
+    
+    
+    filter: grayscale(70%);
+    @include phone {
+      filter: none
+    };
+    @include tablet {
+      filter: none
+    
+  }
+    
   };
 
   h2 {
     width: 100%;
-    padding: 0.5rem 2rem;
+    color: #272727;
+    padding: 1.5rem 2rem 0 2rem;
     @include phone {
       padding: 1rem;
     }
@@ -596,21 +624,41 @@ div[class*="olt"] {
 
   h3 {
     transition: 0.5s;
-    padding: 0.5rem 1.25rem;
+    padding: 0.25rem 1.25rem;
     overflow: hidden;
     width: 100%;
+    transform: translateY(0.5rem);
     @include desktop {
       font-size: 1rem;
+    }
+    @include phone{
+      transform: translateY(0);
+    }
+    @include tablet{
+      transform: translateY(0);
     }
   };
 
   h6 {
     // border: 1px solid blue;
-    padding: 0.5rem 1rem 0.5rem 1.25rem;
-    font-family: $main;
+    padding: 0 1rem 0.5rem 1.25rem;
+    font-family: $text!important;
     color: $logo;
-    font-weight: normal;
+    font-weight: bold;
     width: 100%;
+    font-size: 0.75rem;
+    // transition: 0.5s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+    transition: 0.5s;
+    transform: translateY(0.5rem);
+    opacity: 0;
+    @include phone{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @include tablet{
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     span {
       display: none;
@@ -619,8 +667,10 @@ div[class*="olt"] {
 
   p:nth-of-type(1) {
     text-align: justify;
-    padding: 0 2rem;
+    padding: 1rem 2rem 0 2rem;
     column-count: 2;
+    font-family: $text;
+
     @include phone {
       column-count: 1;
       text-align: left;
@@ -628,7 +678,7 @@ div[class*="olt"] {
     };
     color: $dark;
     @include phone {
-      color: black;
+      color: $my-black;
     };
     font-size: 1rem;
   }
@@ -731,26 +781,34 @@ div[class*="olt"] {
   background-color: rgba(0,0,0, 0.9);
   width: 100vw;
   min-height: 100vh;
-
+  z-index: 999;
   .fullScreen {
     background: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 720px;
     @include phone {
       width: 90%;
     }
 
     img {
       display: block;
-      margin: 0 1rem 0 auto;
+      // margin: 1rem;
       max-height: 20rem;
       float: left;
+      padding: 0.5rem;
       @include phone {
-        padding: 0.5rem;
+        padding: 1.5rem;
+        max-height: 720px;
+        width: 100%;
       }
+      @include phone-landscape{
+        max-height: 20rem;
+        width:auto;
+      }
+      
       text-align: center;
     }
 
@@ -758,17 +816,21 @@ div[class*="olt"] {
       width: 100%;
       font-size: 1rem;
       padding: 1rem;
+      
+      
       @include phone {
         font-size: 0.875rem;
       }
       text-align: justify;
-      font-family: $main;
+      font-family: $text!important;
       font-weight: normal;
     }
 
     h3 {
+      
       // padding:0.5rem;
       margin: 1rem;
+      text-align: center;
     }
   }
 }
@@ -824,19 +886,17 @@ div[class*="olt"] {
   .olt-3 {
     box-sizing: border-box;
     border: none;
+    
+    h3{
+      transform: none;
+      margin: 0.25rem 0 0.5rem 0;
+      
+      
+    }
     // margin: 1rem;
   }
 
-  img {
-    transition: 0.5s;
-    filter: grayscale(90%);
-    @include phone {
-      filter: none
-    };
-    @include tablet {
-      filter: none
-    };
-  }
+  
 }
 
 .disabled {
