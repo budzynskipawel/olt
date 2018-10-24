@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
   var tiles = document.getElementsByClassName('tile');
   var tileBackground = document.getElementById('tile-background');
   var newTile = document.createElement("div");
+  var closeBtn = document.createElement('h4');
+  
+  
 
   for(var i = 0; i < tiles.length; i++) {
     tiles[i].addEventListener("click", showFullScreen)
@@ -42,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     newTile.innerHTML = this.innerHTML;
     tileBackground.appendChild(newTile);
+    newTile.appendChild(closeBtn);
+    closeBtn.style.color = 'gray';
+    closeBtn.style.textAlign = 'center';
     newTile.classList.add("fullScreen");
     console.log(newTile);
     tileBackground.classList.add("showBackground");
