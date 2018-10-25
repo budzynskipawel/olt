@@ -5,26 +5,30 @@ html {
   height: 100%;
   min-width: 320px;
   min-height: 540px;
+
   @include phone {
     min-height: 360px;
   }
+
   font-family: $main;
 }
 
-.noscript{
+.noscript {
   font-weight: bold;
   position: fixed;
   width: 100%;
   padding: 0.25rem;
   text-align: center;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   z-index: 100;
   left: 50%;
   color: white;
   // background-color: #147D7D;
   background-color: darkred;
   margin-bottom: 2rem;
-};
+}
+
+;
 
 h1,
 h2,
@@ -38,15 +42,19 @@ h6 {
 
 body {
   background-color: $super;
-};
+}
 
-.clearfix{
+;
 
-  &::after{
-  content: "";
+.clearfix {
+
+  &::after {
+    content: "";
     clear: both;
     display: table;
-  };
+  }
+
+  ;
 }
 
 .center {
@@ -54,16 +62,25 @@ body {
   margin: 0 auto;
   // max-width: 1024px;
   width: 90%;
+
   @include phone {
     width: 100%;
-  };
+  }
+
+  ;
+
   @include tablet {
     width: 100%;
-  };
+  }
+
+  ;
+
   @include large {
     width: 1440px;
   }
-};
+}
+
+;
 
 .margin-menu {
   @include desktop {
@@ -78,15 +95,19 @@ body {
 
 .ologo {
   color: $logo;
-};
+}
+
+;
 
 .left-menu {
   @include tablet {
     display: none;
   }
+
   @include phone {
     display: none;
   }
+
   position: fixed;
   height: 100%;
   width: 6rem;
@@ -132,16 +153,24 @@ body {
           width: 100%;
           height: 100%;
           text-decoration: none;
-        };
-      };
+        }
+
+        ;
+      }
+
+      ;
 
       &:last-of-type {
         position: absolute;
         bottom: 2rem;
       }
-    };
+    }
+
+    ;
   }
-};
+}
+
+;
 
 #sklepy {
   position: relative;
@@ -173,15 +202,19 @@ body {
 
         .line-under::after {
           width: 4rem;
+
           @include phone {
             width: 10rem;
           }
+
           background-color: $logo;
         }
       }
     }
   }
-};
+}
+
+;
 
 #sklepy:hover .aside-list {
   display: block;
@@ -194,7 +227,9 @@ body {
   height: 2rem;
   background-image: url("../images/circle.png");
   margin: 1rem auto;
-};
+}
+
+;
 
 .ham-circle {
   position: fixed;
@@ -208,6 +243,7 @@ body {
   border-radius: 50%;
   right: 1rem;
   top: 1rem;
+
   @include phone {
     right: 1rem;
     top: 1rem;
@@ -218,7 +254,7 @@ body {
     height: 22px;
     margin: 22px;
     display: block;
-    
+
     &:hover {
       cursor: pointer;
     }
@@ -236,7 +272,7 @@ body {
 
   .hamburger-active {
     span:nth-last-of-type(1) {
-      transform: rotate(45deg) translate(-3px,-10px);
+      transform: rotate(45deg) translate(-3px, -10px);
       transition: 1s;
     }
 
@@ -249,65 +285,83 @@ body {
       opacity: 0;
     }
   }
-};
+}
+
+;
 
 #right-menu {
   width: 11rem;
+
   @include phone {
-   
+
     min-width: 100%;
     // border-left: 0.5rem solid $logo;
-  };
+  }
+
+  ;
   min-height: 540px;
   height: 100%;
   background-color: white;
   position: fixed;
   top: 0;
   right: -500px;
+
   @include phone {
     right: -720px;
-  };
+  }
+
+  ;
   z-index: 98;
   transition: 1s;
 
   .main-list {
     margin-top: 8rem;
+
     @include phone {
       margin-top: 6rem;
     }
+
     @include phone-landscape {
       margin: 0;
       padding: 0.5rem 0;
-    };
+    }
+
+    ;
     height: 100%;
 
-    & > li {
+    &>li {
       @include phone {
         border-bottom: 1px solid $light;
-        
+
       }
+
       text-align: center;
       list-style: none;
       padding: 1.5rem 0;
       font-family: $text;
       font-weight: 700;
       font-size: 0.875rem;
+
       @include phone {
         font-size: 1.25rem;
       }
+
       color: $light;
 
       &:last-of-type {
         position: absolute;
         bottom: 2rem;
-        border-bottom: none!important;
+        border-bottom: none !important;
         width: 100%;
+
         @include phone {
           position: inherit;
         }
       }
     }
-  };
+  }
+
+  ;
 
   a {
     display: block;
@@ -318,24 +372,34 @@ body {
     &:link {
       text-decoration: none;
       color: $light;
-    };
+    }
+
+    ;
 
     &:visited {
       color: $light;
-    };
+    }
+
+    ;
 
     &:hover {
       color: $logo;
 
       .line-under::after {
         width: 8rem;
+
         @include phone {
           width: 10rem;
         }
+
         background-color: $logo;
       }
-    };
-  };
+    }
+
+    ;
+  }
+
+  ;
 
   .inner-list {
     display: none;
@@ -348,7 +412,9 @@ body {
       padding: 1.5rem 0;
       list-style: none;
     }
-  };
+  }
+
+  ;
 
   .expand {
     &:hover .open-mobile {
@@ -359,35 +425,50 @@ body {
       @include desktop {
         display: block;
       }
+
       @include large {
         display: block;
       }
-    };
+    }
+
+    ;
   }
-};
+}
+
+;
 
 .left-border {
   @include desktop {
     box-shadow: 0 0 0.25rem $dark;
-  };
+  }
+
+  ;
+
   @include tablet {
     border-left: 1rem solid $logo;
-  };
+  }
+
+  ;
 }
 
 .move-left {
   transform: translateX(-500px);
+
   @include phone {
     transform: translateX(-720px);
   }
-};
+}
+
+;
 
 .line-under {
   position: relative;
   width: 10rem;
+
   @include phone {
     width: 12rem;
   }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,23 +483,36 @@ body {
     background-color: $light;
     bottom: -0.5rem;
     left: 1rem;
-  };
-}; // index.html
+  }
+
+  ;
+}
+
+; // index.html
 ;
 
 .main {
   min-height: 100%;
   padding-top: 4rem;
+
   @include large {
     padding-top: 6rem;
-  };
+  }
+
+  ;
+
   @include phone {
     padding-top: 6.5rem;
-  };
+  }
+
+  ;
+
   @include phone-landscape {
     padding-top: 4rem;
   }
-};
+}
+
+;
 
 .info-ramka {
   font-family: $main;
@@ -433,6 +527,7 @@ body {
   border-radius: 0.5rem;
   color: $my-black;
   background-color: rgba(238, 238, 238, 0.6);
+
   @include phone {
     width: 90%;
     margin-top: 0;
@@ -440,21 +535,31 @@ body {
     line-height: 1.5rem;
     padding: 1rem 0;
     margin-top: 2rem;
-  };
+  }
+
+  ;
+
   @include phone-landscape {
     margin-top: 0;
-  };
+  }
+
+  ;
+
   @include tablet {
     width: 90%;
   }
+
   @include large {
     width: 40%;
   }
-};
+}
+
+;
 
 .nowy {
   position: relative;
   height: 12rem;
+
   @include phone {
     height: 7rem;
   }
@@ -477,41 +582,56 @@ body {
     text-align: center;
     font-size: 12rem;
     font-family: $bold;
+
     @include phone {
       font-size: 6rem;
-    };
+    }
+
+    ;
     background: -webkit-linear-gradient(transparent, #eee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  };
+  }
+
+  ;
 
   h2 {
     transform: translateY(-80%);
     font-size: 8rem;
+
     @include phone {
       font-size: 4.5rem;
     }
-  };
+  }
+
+  ;
 
   h3 {
     transform: translateY(120%);
     font-family: $text;
     font-size: 1.25rem;
     word-spacing: 1rem;
+
     @include phone {
       font-size: 0.75rem;
       word-spacing: 0.5rem;
-    };
+    }
+
+    ;
   }
-};
+}
+
+;
 
 .more-button {
   width: 8rem;
   display: block;
   margin: 1rem auto 0;
+
   @include large {
     margin: 2rem auto;
   }
+
   height: 2.5rem;
   background: $logo;
   border-radius: 1.25rem;
@@ -525,18 +645,22 @@ body {
 
   &:hover {
     cursor: pointer;
-  };
+  }
+
+  ;
 
   &:active {
     transform: translate(0.125rem, 0.125rem);
   }
 }
+
 //end of index.html
 
 .site-title {
   color: $logo;
   font-size: 2.5rem;
   padding: 0.75rem;
+
   @include large {
     font-size: 3rem;
     padding: 2rem;
@@ -547,31 +671,33 @@ body {
   margin: 1rem;
   display: flex;
   flex-wrap: wrap;
-};
+}
+
+;
 
 .hide {
   display: none;
 }
 
 div[class*="olt"] {
-  background-color: rgba(255,255,255, 0.7);
-  
+  background-color: rgba(255, 255, 255, 0.7);
+
   transition: 0.5s;
- 
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
-   
+
 
     img {
-      filter:none;
+      filter: none;
     }
 
-    h6{
+    h6 {
       transform: translateY(0);
       opacity: 1;
     }
 
-    h3{
+    h3 {
       transform: translateY(0);
     }
   }
@@ -593,30 +719,38 @@ div[class*="olt"] {
     align-self: flex-start;
     transition: 0.5s;
     width: 100%;
+
     @include desktop {
       // height: 15rem; new imgs
     }
+
     // height: 20rem;  new imgs
     object-fit: contain;
     // margin: 1rem 0;
     padding: 0.5rem;
-    
-    
+
+
     filter: grayscale(70%);
+
     @include phone {
       filter: none
-    };
+    }
+
+    ;
+
     @include tablet {
       filter: none
-    
+    }
+
   }
-    
-  };
+
+  ;
 
   h2 {
     width: 100%;
     color: #272727;
     padding: 1.5rem 2rem 0 2rem;
+
     @include phone {
       padding: 1rem;
     }
@@ -628,34 +762,41 @@ div[class*="olt"] {
     overflow: hidden;
     width: 100%;
     transform: translateY(0.5rem);
+
     @include desktop {
       font-size: 1rem;
     }
-    @include phone{
+
+    @include phone {
       transform: translateY(0);
     }
-    @include tablet{
+
+    @include tablet {
       transform: translateY(0);
     }
-  };
+  }
+
+  ;
 
   h6 {
     // border: 1px solid blue;
     padding: 0 1rem 0.5rem 1.25rem;
-    font-family: $main!important;
+    font-family: $main !important;
     color: $logo;
     font-weight: bold;
     width: 100%;
     font-size: 0.75rem;
-    
+
     transition: 0.5s;
     transform: translateY(0.5rem);
     opacity: 0;
-    @include phone{
+
+    @include phone {
       opacity: 1;
       transform: translateY(0);
     }
-    @include tablet{
+
+    @include tablet {
       opacity: 1;
       transform: translateY(0);
     }
@@ -663,25 +804,35 @@ div[class*="olt"] {
     span {
       display: none;
     }
-  };
+  }
+
+  ;
 
   p:nth-of-type(1) {
     text-align: justify;
     padding: 1rem 2rem 0 2rem;
     column-count: 2;
     font-family: $text;
+
     @include phone {
       column-count: 1;
       text-align: left;
       padding: 1rem;
-    };
-    color: $dark;
-    @include phone {
       
+    }
 
-      font-size: 1.125rem;
-      
-    };
+    ;
+    color: $dark;
+
+    @include phone {
+
+
+      // font-size: 1.125rem;
+    
+
+    }
+
+    ;
     font-size: 1rem;
   }
 }
@@ -689,43 +840,58 @@ div[class*="olt"] {
 .olt-1 {
   width: 24%;
   margin-right: 1%;
-};
+}
+
+;
 
 .olt-2 {
   width: 49%;
   margin-right: 1%;
 
   a {
-    align-items: center!important;
+    align-items: center !important;
+
     @include desktop {
       img {
-        width: 50%!important;
-      };
+        width: 50% !important;
+      }
+
+      ;
     }
+
     @include large {
       img {
-        width: 50%!important;
+        width: 50% !important;
       }
     }
   }
-};
+}
+
+;
 
 .olt-3 {
   width: 74%;
   margin-right: 1%;
-};
+}
+
+;
 
 .olt-1,
 .olt-2,
 .olt-3 {
   min-height: 15rem;
+
   @include phone {
     width: 99%;
     margin-top: 1rem;
-  };
+  }
+
+  ;
+
   @include phone-landscape {
     width: 49%;
   }
+
   @include tablet {
     width: 49%;
     margin-top: 1rem;
@@ -734,13 +900,17 @@ div[class*="olt"] {
   .right-column {
     // border: 1px solid yellow;
     width: 100%;
+
     @include large {
       width: 50%;
     }
+
     @include desktop {
       width: 50%;
     }
-  };
+  }
+
+  ;
 }
 
 .fill {
@@ -748,64 +918,79 @@ div[class*="olt"] {
     margin-right: 1%;
     order: 2;
     width: 99%;
-  };
+  }
+
+  ;
+
   @include phone-landscape {
     margin-right: 1%;
     order: 2;
     width: 99%;
   }
-};
+}
+
+;
 
 .no-link {
-  border: none!important;
+  border: none !important;
   padding-bottom: 2rem;
-  background-color: rgba(255,255,255, 0.9)!important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+
   @include tablet {
     width: 99%;
-  };
+  }
+
+  ;
+
   @include phone-landscape {
     width: 99%;
   }
+
   @include phone {
-    // order: -1;
+    background-color: #fff!important;
   }
-  align-content: flex-start!important;
+
+  align-content: flex-start !important;
 
   &:hover {
-    cursor: auto!important;
+    cursor: auto !important;
   }
 }
+
 // tile background:
 
 #tile-background {
   display: none;
   position: fixed;
   top: 0;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100vw;
   min-height: 100vh;
   z-index: 999;
+
   .fullScreen {
     background: white;
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include phone{
+
+    @include phone {
       overflow-y: scroll;
     }
-    
-    
+
+
     width: 720px;
+
     @include phone {
       height: 90vh;
       width: 90%;
       top: 50%;
       left: 50%;
-      
+
       transform: translate(-50%, -50%);
-     
+
     }
 
     img {
@@ -814,16 +999,18 @@ div[class*="olt"] {
       max-height: 20rem;
       float: left;
       padding: 0.5rem;
+
       @include phone {
         padding: 1.5rem;
         max-height: 720px;
         width: 100%;
       }
-      @include phone-landscape{
+
+      @include phone-landscape {
         max-height: 20rem;
-        width:auto;
+        width: auto;
       }
-      
+
       text-align: center;
     }
 
@@ -833,19 +1020,20 @@ div[class*="olt"] {
       // font-size: 1rem;
       padding: 1rem;
       line-height: 150%;
-      border-right: 5px solid $logo;    
-      
+      border-right: 5px solid $logo;
+
       @include phone {
         font-size: 1.25rem;
         line-height: normal;
       }
+
       text-align: justify;
-      font-family: $main!important;
+      font-family: $main !important;
       font-weight: normal;
     }
 
     h3 {
-      
+
       // padding:0.5rem;
       margin: 1rem;
       text-align: center;
@@ -854,8 +1042,9 @@ div[class*="olt"] {
 }
 
 .showBackground {
-  display: block!important;
+  display: block !important;
 }
+
 //oferta
 
 .fixed-background {
@@ -881,28 +1070,38 @@ div[class*="olt"] {
   background-color: transparent;
   // padding-bottom: 1rem;
   // wylaczony na potrzeby formularza;
-};
+}
 
-.shake, .rekl {
-    background-repeat: no-repeat;
+;
+
+.shake,
+.rekl {
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @include phone {
     display: none;
-  };
+  }
+
+  ;
+
   @include tablet {
     display: none;
   }
+
   // border-right: none!important;
-};
-.shake{
+}
+
+;
+
+.shake {
   background-image: url("../images/kompetencja.jpg");
 }
-.rekl{
+
+.rekl {
   background-image: url("../images/skutecznosc.jpg");
   filter: grayscale(50%)
-  
-  
 }
 
 .oferta-row {
@@ -912,63 +1111,77 @@ div[class*="olt"] {
   .olt-3 {
     box-sizing: border-box;
     border: none;
-    
-    h3{
+
+    h3 {
       transform: none;
       margin: 0.25rem 0 0.5rem 0;
-      
-      
+
+
     }
+
     // margin: 1rem;
   }
 
-  
+
 }
 
 .disabled {
   pointer-events: none;
 }
+
 /*KONTAKT*/
 .kontakt-bg {
   @include phone {
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
 .full-height {
   min-height: 100vh;
   // border: 12px solid green;
-};
+}
+
+;
 
 .formularz {
- 
+
   padding: 0 1rem;
   width: 719px;
   color: $logo;
   font-family: $main;
   font-weight: bold;
   height: 100%;
+
   @include phone {
     width: 100%;
   }
+
   margin: 0 auto;
   // background: rgba(255,255,255, 0.95);
-background: white;
+  background: white;
+
   h1,
   h4 {
     padding: 0.5rem 0;
+
     @include phone {
       padding: 1rem 0;
     }
+
     font-family: $main;
     font-weight: bold;
-  };
-};
+  }
+
+  ;
+}
+
+;
 
 .formfields-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   @include phone {
     justify-content: center;
   }
@@ -976,6 +1189,7 @@ background: white;
   .formfield {
     width: 48%;
     padding: 1rem 0;
+
     @include phone {
       width: 80%;
     }
@@ -987,27 +1201,32 @@ background: white;
 }
 
 .empty {
-  border: 2px solid red!important;
+  border: 2px solid red !important;
 
-  & + p.req {
-    display: block!important;
+  &+p.req {
+    display: block !important;
   }
-};
+}
+
+;
 
 label[class="wrapping"] {
   display: block;
   font-size: 0.75rem;
   padding: 0.25rem 0;
-};
+}
+
+;
 
 input[type="text"],
 textarea {
   width: 100%;
   background-color: transparent;
-  
+
   @include phone {
     width: 100%;
   }
+
   border: 2px solid $logo;
   border-radius: 1rem;
   height: 2.5rem;
@@ -1019,35 +1238,40 @@ textarea {
     border: 2px solid $logo;
   }
 
-  
-};
 
-textarea{
+}
+
+;
+
+textarea {
   min-height: 10rem;
-    resize: none!important;
-    overflow: hidden;
+  resize: none !important;
+  overflow: hidden;
 }
 
 .valid {
   display: none;
-};
+}
+
+;
 
 .invalid {
-  border: 2px solid red!important;
+  border: 2px solid red !important;
 
-  & ~ p.valid {
-    display: block!important;
+  &~p.valid {
+    display: block !important;
   }
 }
 
 input[type="file"] {
   width: 0.1px;
-	height: 0.1px;
+  height: 0.1px;
   opacity: 0;
   overflow: hidden;
-	position: absolute;
-	z-index: -1;
-  &~label{
+  position: absolute;
+  z-index: -1;
+
+  &~label {
     display: inline-block;
     transition: 0.25s;
     text-align: center;
@@ -1056,37 +1280,42 @@ input[type="file"] {
     margin: 1rem 0;
     padding: 0.5rem;
     border-radius: 1rem;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
       background-color: $logo;
       color: white;
     }
   }
-};
+}
 
-#uploadedFiles{
-  margin:0 0 1rem 0;
+;
+
+#uploadedFiles {
+  margin: 0 0 1rem 0;
   overflow: hidden;
-  h4{
+
+  h4 {
     font-size: 1rem;
   }
+
   font-size: 0.75rem;
 }
 
 input[type="checkbox"] {
   display: block;
-  float:left;
+  float: left;
   width: 1rem;
   height: 1rem;
   background-color: red;
   position: relative;
   left: 1rem;
-  top:1rem;
+  top: 1rem;
   // z-index: -1;
 
   outline: none;
 
-/*
+  /*
   &::before {
     display:block; 
     z-index: 12;
@@ -1115,11 +1344,11 @@ input[type="checkbox"] {
       }
     }
 */
-    //start
-&+label {
-  display: block;
-  float:left;
-    z-index:8;
+  //start
+  &+label {
+    display: block;
+    float: left;
+    z-index: 8;
     box-sizing: border-box;
     text-align: center;
     font-size: 1.5rem;
@@ -1130,118 +1359,204 @@ input[type="checkbox"] {
     height: 3rem;
     position: relative;
     left: -0.5rem;
-      cursor: pointer;
+    cursor: pointer;
     background-color: white;
     border: 2px solid $logo;
     border-radius: 1rem;
-    content:" ";
-}
-    &:checked {
-      &+label {
-        
-        background-image: url("../images/ok.png");
-        background-size: contain;
-        border: none;
+    content: " ";
+  }
 
-      }
+  &:checked {
+    &+label {
+
+      background-image: url("../images/ok.png");
+      background-size: contain;
+      border: none;
+
     }
-    //stop
-    
+  }
+
+  //stop
+
 
 }
-  input[type="submit"] {
-    width: 200px;
-    height: 50px;
-    background-color: $logo;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    color: white;
-    font-family: $main;
-    font-size: 1.5rem;
-    transition: 1s;
-    margin: 0.5rem 0;
+
+input[type="submit"] {
+  width: 200px;
+  height: 50px;
+  background-color: $logo;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: white;
+  font-family: $main;
+  font-size: 1.5rem;
+  transition: 1s;
+  margin: 0.5rem 0;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.smalltext,
+.zgoda {
+  font-size: 0.5625rem;
+  line-height: 0.5625rem;
+}
+
+;
+
+.zgoda {
+  padding: 0.5rem 0;
+
+  // border: 1px solid orange;
+  // display: flex; test
+  // align-items: center; test
+
+  div {
+
+    position: relative;
+    // left: -2.5rem;
+    padding-left: 0.5rem;
+    text-align: justify;
+  }
+}
+
+#wrongFiles {
+  font-size: 1rem;
+  padding-left: 0 !important;
+
+  @include phone {
+    font-size: 0.875rem;
+  }
+}
+
+.marker {
+  color: red !important;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+;
+
+.downd {
+  margin: 1rem 0;
+}
+
+.rekl-list {
+  list-style-type: none;
+  width: 100%;
+  margin-top: 1rem;
+
+  h1 {
+    font-weight: normal;
+    font-family: $main !important;
+    text-align: center;
+    transition: 0.5s;
+    letter-spacing: 5px;
+  }
+
+
+  li {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: $dark;
+    margin: 0 1% 0.75rem 0;
+    padding: 0.75rem;
+    transition: 0.5s;
+
+    
     cursor: pointer;
 
-    &:disabled {
-      opacity: 0.5;
-    }
-  }
+    &:hover {
+      background-color: #fff;
 
-  .smalltext,
-  .zgoda {
-    font-size: 0.5625rem;
-    line-height: 0.5625rem;
-  };
-
-  .zgoda {
-    padding: 0.5rem 0;
-    
-    // border: 1px solid orange;
-    // display: flex; test
-    // align-items: center; test
-
-    div {
-      
-      position: relative;
-    // left: -2.5rem;
-      padding-left: 0.5rem;
-      text-align: justify;
-    }
-  }
-
-  #wrongFiles{
-    font-size: 1rem;
-    padding-left: 0!important;
-    @include phone{
-      font-size: 0.875rem;
-    }
-  }
-
-  .marker {
-    color: red!important;
-    padding: 0.5rem;
-    font-weight: bold;
-  };
-
-  .downd{
-    margin: 1rem 0;
-  }
-
-  .rekl-list{
-    list-style-type: none;
-    width: 100%;
-    margin-top: 1rem;
-    h1{
-      font-weight: normal;
-      font-family: $main!important;
-      text-align: center;
-      transition: 0.5s;
-    }
-    
-    
-    li{
-      background-color: rgba(255,255,255, 0.7);
-      color: $dark;
-      margin: 0 1% 0.75rem 0;
-      padding: 0.75rem;
-      transition: 0.25s;
-      letter-spacing: 5px;
-      
-      cursor: pointer;
-      &:hover{
-        color: $my-black;
-        background-color: #fff;
-        h1{
+      h1 {
         letter-spacing: normal;
-        }
-        
-        
-        
+      }
 
+
+
+
+    }
+
+    &>div {
+      font-family: $text;
+      margin: 1rem 0 0 0;
+      color: $logo;
+      max-width: 1024px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+        padding: 1rem 0 0 0;
+      font-size: 1rem;
+      p{
+        border-bottom: 1px solid $dark;
+        padding-bottom: 1rem;
       }
-      div{
-        display: none;
-      }
+      .rekl-gal{
+        position: relative;
+        max-width: 720px;;
+      left: 50%;
+      transform: translateX(-50%);
+        padding: 1rem 0 0 0;
+        img {
+        
+          width: 25%;
+          height: auto;
+          padding: 0 1rem 1rem 0;
+          float: left;
+          
+          @include phone{
+            width: 50%;
+  
+          }
+  
+          @include phone-landscape{
+            width: 25%;
+          }
+          
+        }
+      
+            }
+
+            .rekl-gal-hq{
+              padding: 1rem 0 0 0;
+              
+              img {
+              
+                width: 25%;
+                height: auto;
+                padding: 0 1rem 1rem 0;
+                float: left;
+                
+                @include phone{
+                  width: 100%;
+        
+                }
+        
+                @include phone-landscape{
+                  width: 50%;
+                }
+                
+              }
+            
+                  }
+
+      
+
+
     }
   }
+
+}
+
+.rekl-active {
+  transition: 0.5s;
+  background-color: #fff !important;
+
+  h1 {
+    letter-spacing: normal !important;
+  }
+}

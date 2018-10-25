@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // alert("DOMContentLoaded");
   //hamburger
   var hamburger = document.getElementById('hamburger');
@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburger.classList.toggle('hamburger-active');
     rightMenu.classList.toggle('move-left');
   };
-  if(hamburger) {
+  if (hamburger) {
     hamburger.addEventListener("click", showHideMenu);
   }
 
   //close right menu after clicking on link;
 
-  for(var i = 0; i < rightMenuLinks.length; i++) {
-    if(rightMenuLinks[i].getAttribute("href") == '#') {
+  for (var i = 0; i < rightMenuLinks.length; i++) {
+    if (rightMenuLinks[i].getAttribute("href") == '#') {
       rightMenuLinks[i].addEventListener("click", showHideMenu);
     }
 
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
   var tileBackground = document.getElementById('tile-background');
   var newTile = document.createElement("div");
   var closeBtn = document.createElement('h4');
-  
-  
 
-  for(var i = 0; i < tiles.length; i++) {
+
+
+  for (var i = 0; i < tiles.length; i++) {
     tiles[i].addEventListener("click", showFullScreen)
   };
-  if(tileBackground) {
+  if (tileBackground) {
     tileBackground.addEventListener("click", hideFullScreen);
   }
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var more = document.getElementById('more');
   var hide = document.getElementsByClassName("hide");
-  if(more) {
+  if (more) {
 
     more.addEventListener("click", showRows);
   }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function showRows() {
     this.style.display = "none";
     console.log(hide);
-    for(var i = 0; i <=hide.length ; i++) {
+    for (var i = 0; i <= hide.length; i++) {
       console.log(hide[i]);
       // hide[i].classList.remove("hide");
       hide[i].style.display = "flex";
@@ -80,6 +80,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
   };
 
+  function rekl() {
+    var reklList = $('.rekl-list');
+    var reklTitle = reklList.find('li');
+    var reklDesc = reklTitle.find('div');
+    reklDesc.hide();
+    reklTitle.on('click', toggleDesc);
+
+    function toggleDesc() {
+      reklDesc.slideUp(500);
+      reklDesc.parent().removeClass('rekl-active');
+      //        
+      if ($(this).find('div').is(':visible')) {
+        $(this).removeClass('rekl-active');
+        $(this).find('div').slideUp(500);
+        
+      } else {
+        $(this).find('div').slideDown(500);
+        $(this).addClass('rekl-active');
+      }
+    };
+  };
+  rekl();
 
 
 
