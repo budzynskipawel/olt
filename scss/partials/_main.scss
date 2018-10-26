@@ -934,7 +934,7 @@ div[class*="olt"] {
 .no-link {
   border: none !important;
   padding-bottom: 2rem;
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.9)!important;
 
   @include tablet {
     width: 99%;
@@ -954,6 +954,10 @@ div[class*="olt"] {
 
   &:hover {
     cursor: auto !important;
+  }
+
+  h4{
+    padding: 1rem;
   }
 }
 
@@ -1075,7 +1079,8 @@ div[class*="olt"] {
 ;
 
 .shake,
-.rekl {
+.rekl,
+.spec {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1101,7 +1106,12 @@ div[class*="olt"] {
 
 .rekl {
   background-image: url("../images/skutecznosc.jpg");
-  filter: grayscale(50%)
+  filter: grayscale(50%);
+}
+
+.spec{
+  background-image: url("../images/spec.jpg");
+  filter: grayscale(50%);
 }
 
 .oferta-row {
@@ -1559,4 +1569,29 @@ input[type="submit"] {
   h1 {
     letter-spacing: normal !important;
   }
+}
+
+.spec-list{
+  margin: 0 1rem;
+  list-style-position: inside;
+  li{
+    color: $logo;
+    font-family: $text;
+    margin-top: 0.25rem;
+    padding-left: 0.5rem;
+  }
+
+}
+
+.ref {
+ 
+  ul{
+    list-style-type: none;
+    
+  }
+  
+li{
+ 
+  border-bottom: 1px solid $dark;
+}
 }
