@@ -730,7 +730,7 @@ div[class*="olt"] {
     padding: 0.5rem;
 
 
-    filter: grayscale(70%);
+    filter: grayscale(80%);
 
     @include phone {
       filter: none
@@ -1002,7 +1002,7 @@ div[class*="olt"] {
       // margin: 1rem;
       max-height: 20rem;
       float: left;
-      padding: 0.5rem;
+      padding: 0.5rem 1.5rem 0.5rem 0.5rem;
 
       @include phone {
         padding: 1.5rem;
