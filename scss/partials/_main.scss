@@ -1593,6 +1593,9 @@ input[type="submit"] {
 li{
  
   border-bottom: 1px solid $dark;
+  &:last-of-type{
+    border-bottom: none;
+  }
 }
 }
 
@@ -1612,4 +1615,12 @@ li{
   border-radius: 50%;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+.logo-ref{
+  display: block;
+  filter: none!important;
+  width: auto!important;
+  margin: 0 auto;
+  
 }
