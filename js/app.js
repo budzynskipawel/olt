@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var tiles = document.getElementsByClassName('tile');
   var tileBackground = document.getElementById('tile-background');
   var newTile = document.createElement("div");
-  var closeBtn = document.createElement('h4');
+  var closeBtn = document.createElement('div');
+
 
 
 
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tiles[i].addEventListener("click", showFullScreen)
   };
   if (tileBackground) {
-    tileBackground.addEventListener("click", hideFullScreen);
+    // tileBackground.addEventListener("click", hideFullScreen);
   }
 
 
@@ -45,16 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     newTile.innerHTML = this.innerHTML;
     tileBackground.appendChild(newTile);
-    newTile.appendChild(closeBtn);
+    tileBackground.appendChild(closeBtn);
+    closeBtn.classList.add('close-btn');
     closeBtn.style.color = 'gray';
     closeBtn.style.textAlign = 'center';
+    closeBtn.innerText = "+";
     newTile.classList.add("fullScreen");
+    closeBtn.addEventListener('click', hideFullScreen);
     console.log(newTile);
     tileBackground.classList.add("showBackground");
   };
 
   function hideFullScreen() {
-    this.classList.toggle("showBackground");
+    
+    
+    this.parentElement.classList.toggle("showBackground");
+    event.stopPropagation();
   };
 
   //show more rows on click

@@ -1507,7 +1507,7 @@ input[type="submit"] {
       }
       .rekl-gal{
         position: relative;
-        max-width: 720px;;
+        max-width: 720px;
       left: 50%;
       transform: translateX(-50%);
         padding: 1rem 0 0 0;
@@ -1594,4 +1594,22 @@ li{
  
   border-bottom: 1px solid $dark;
 }
+}
+
+.close-btn{
+  background-color: black;
+  border: 0.125rem solid $dark;
+  color: $dark!important;
+  font-family: $demi;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 0.125rem 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: fixed;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
