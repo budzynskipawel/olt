@@ -55,12 +55,19 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener('click', hideFullScreen);
     console.log(newTile);
     tileBackground.classList.add("showBackground");
+
+   
+   
+    
+
   };
 
   function hideFullScreen() {
     
-    
-    this.parentElement.classList.toggle("showBackground");
+    if(tileBackground){
+      tileBackground.classList.toggle('showBackground');
+    }
+    // this.parentElement.classList.toggle("showBackground");
     event.stopPropagation();
   };
 
@@ -109,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   };
   rekl();
-
 
 
 
